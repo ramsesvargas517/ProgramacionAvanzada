@@ -883,10 +883,24 @@ a.text-hover:focus:after {
 /* - Modal Structure
 /*----------------------------------------------*/
 
+.modal {
+    z-index: 1055 !important;
+}
+
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+
+
 /* - Modal Popup
 /*----------------------------------------------*/
-.modal-content .modal-close-btn {
+.modal-close-btn {
   text-align: right;
+}
+
+.modal-content {
+    background-color: #ffffff !important;
+    opacity: 1 !important;
 }
 
 /* - Quick View
@@ -1619,4 +1633,10 @@ a.text-hover:focus:after {
     transform: translate3d(0, 0, 0) !important;
     opacity: 1 !important;
   }  
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    display: block;
 }

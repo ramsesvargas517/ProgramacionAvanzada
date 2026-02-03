@@ -166,6 +166,9 @@
     <Content Include="Template\css\ajax-loader.gif" />
     <Content Include="Template\css\style.css" />
     <Content Include="Template\css\vendor.css" />
+    <Content Include="Template\Images\card-image1.jpg" />
+    <Content Include="Template\Images\card-image2.jpg" />
+    <Content Include="Template\Images\card-image3.jpg" />
     <Content Include="Template\Images\main-logo.png" />
     <Content Include="Template\js\jquery-1.11.0.min.js" />
     <Content Include="Template\js\plugins.js" />
