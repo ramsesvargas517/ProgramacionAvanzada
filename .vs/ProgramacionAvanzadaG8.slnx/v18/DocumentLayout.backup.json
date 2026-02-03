@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\users\\xpc\\onedrive\\universidad\\programacion avanzada\\programacionavanzadag8\\programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\users\\xpc\\onedrive\\universidad\\programacion avanzada\\programacionavanzadag8\\programacionavanzadag8\\template\\js\\register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\template\\js\\register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\users\\xpc\\onedrive\\universidad\\programacion avanzada\\programacionavanzadag8\\programacionavanzadag8\\views\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\users\\xpc\\onedrive\\universidad\\programacion avanzada\\programacionavanzadag8\\programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\users\\xpc\\onedrive\\universidad\\programacion avanzada\\programacionavanzadag8\\programacionavanzadag8\\template\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\template\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 198,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "register.js",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Template\\js\\register.js",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Template\\js\\register.js",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Template\\js\\register.js",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Template\\js\\register.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-03T05:06:59.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Views\\Register.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Register.cshtml",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Views\\Register.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T05:05:27.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T04:47:05.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Template\\css\\style.css",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Template\\css\\style.css",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Template\\css\\style.css",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Template\\css\\style.css",
+              "ViewState": "AgIAAKoDAAAAAAAAAAASwMgDAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-03T04:37:10.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\XPC\\OneDrive\\Universidad\\Programacion Avanzada\\ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAK0CAAAAAAAAAAAAAMQCAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-03T04:20:20.4Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
