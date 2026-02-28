@@ -1,0 +1,96 @@
+@model ProgramacionAvanzadaG8.Models.UsuarioModel
+@{
+    ViewBag.Title = "Crear Cuenta";
+}
+
+<section class="py-5 mt-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card border-0 shadow-sm p-4">
+
+                    <div class="text-center mb-4">
+                        <h2 class="fs-3 fw-normal">Crear Cuenta</h2>
+                        <p class="text-muted">Únete a la familia Frijolito</p>
+                    </div>
+
+                    @* Mensaje de error proveniente del controller *@
+                    @if (ViewBag.Mensaje != null)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.Mensaje
+                        </div>
+                    }
+
+                    @using (Html.BeginForm("Registro", "Account", FormMethod.Post, new { id = "register-form" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="login-form">
+                            <div class="mb-3">
+                                @Html.TextBoxFor(m => m.Nombre, new
+                                {
+                                    @class      = "ps-3 text-input w-100",
+                                    placeholder = "Nombre *",
+                                    required    = "required"
+                                })
+                                @Html.ValidationMessageFor(m => m.Nombre, "", new { @class = "text-danger small" })
+                            </div>
+
+                            <div class="mb-3">
+                                @Html.TextBoxFor(m => m.Apellido, new
+                                {
+                                    @class      = "ps-3 text-input w-100",
+                                    placeholder = "Apellido *",
+                                    required    = "required"
+                                })
+                                @Html.ValidationMessageFor(m => m.Apellido, "", new { @class = "text-danger small" })
+                            </div>
+
+                            <div class="mb-3">
+                                @Html.TextBoxFor(m => m.Username, new
+                                {
+                                    @class      = "ps-3 text-input w-100",
+                                    placeholder = "Nombre de Usuario *",
+                                    required    = "required"
+                                })
+                                @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger small" })
+                            </div>
+
+                            <div class="mb-3">
+                                @Html.TextBoxFor(m => m.Email, new
+                                {
+                                    @class      = "ps-3 text-input w-100",
+                                    placeholder = "Correo Electrónico *",
+                                    required    = "required",
+                                    type        = "email"
+                                })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger small" })
+                            </div>
+
+                            <div class="mb-3">
+                                @Html.PasswordFor(m => m.PasswordHash, new
+                                {
+                                    @class      = "ps-3 text-input w-100",
+                                    placeholder = "Contraseña *",
+                                    required    = "required"
+                                })
+                                @Html.ValidationMessageFor(m => m.PasswordHash, "", new { @class = "text-danger small" })
+                            </div>
+
+                            <div class="d-flex justify-content-center gap-3 mt-4">
+                                <button type="submit" class="btn btn-red hvr-sweep-to-right dark-sweep">
+                                    Crear Cuenta
+                                </button>
+                                <a href="@Url.Action("Login", "Account")"
+                                   class="btn btn-outline-gray hvr-sweep-to-right dark-sweep">
+                                    Ya tengo cuenta
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -207,3 +207,7 @@ C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\obj\Debug\Programaci
 C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\obj\Debug\Programa.209D2A46.Up2Date
 C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\obj\Debug\ProgramacionAvanzadaG8.dll
 C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\obj\Debug\ProgramacionAvanzadaG8.pdb
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\EntityFramework.dll
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\EntityFramework.SqlServer.dll
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\EntityFramework.xml
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\EntityFramework.SqlServer.xml

@@ -166,8 +166,13 @@
 
   }); // End of a document
 
-  $(window).load(function(){
-    $('.preloader').fadeOut();
+  // Ocultar preloader cuando la página cargue
+  $(window).on('load', function(){
+    $('.preloader').fadeOut(500);
   });
+  // Fallback: ocultar preloader después de 3 segundos si el evento load no dispara
+  setTimeout(function(){
+    $('.preloader').fadeOut(500);
+  }, 3000);
 
 })(jQuery);

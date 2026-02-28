@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\template\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\template\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\template\\js\\register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\template\\js\\register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 198,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,64 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "register.js",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Template\\js\\register.js",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Template\\js\\register.js",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Template\\js\\register.js",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Template\\js\\register.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-03T05:06:59.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Register.cshtml",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Register.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Register.cshtml",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-03T05:05:27.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAIMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-03T04:47:05.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Template\\css\\style.css",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Template\\css\\style.css",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Template\\css\\style.css",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Template\\css\\style.css",
-              "ViewState": "AgIAAD8GAAAAAAAAAAAAAFsGAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-02-03T04:37:10.837Z",
+              "WhenOpened": "2026-02-28T00:02:12.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-27T23:56:20.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACoCAAAAAAAAAAASwDsCAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-03T04:20:20.4Z",
+              "WhenOpened": "2026-02-27T23:23:49.971Z",
               "EditorCaption": ""
             }
           ]

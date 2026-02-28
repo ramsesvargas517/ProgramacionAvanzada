@@ -1,1 +1,152 @@
-﻿
+@{
+    ViewBag.Title = "Inicio";
+}
+
+
+<div class="modal fade" id="modaltoggle" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen-md-down modal-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="col-lg-12 col-md-12 me-3">
+                    <div class="image-holder">
+                        <%-- Imagen del producto seleccionado para vista rápida --%>
+                        <%-- TODO: reemplazar con imagen dinámica del producto  --%>
+                        <img src="~/Content/Images/card-image1.jpg" alt="Producto" />
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="summary">
+                        <div class="summary-content fs-6">
+                            <div class="product-header d-flex justify-content-between mt-4">
+                                <h3 class="display-7">Set de Construcción</h3>
+                                <div class="modal-close-btn">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                </div>
+                            </div>
+                            <span class="product-price fs-3">₡12,999</span>
+                            <div class="product-details">
+                                <p class="fs-7">Juguete educativo de construcción con 150 piezas coloridas. Ideal para niños de 4 a 8 años.</p>
+                            </div>
+                            <ul class="select">
+                                <li><strong>Colores:</strong> Rojo, Azul, Amarillo, Verde</li>
+                                <li><strong>SKU:</strong> FRJ-1001</li>
+                            </ul>
+                            <div class="variations-form shopify-cart">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="quantity d-flex pb-4">
+                                            <div class="qty-number align-top qty-number-plus d-flex justify-content-center align-items-center text-center">
+                                                <span class="increase-qty plus">
+                                                    <svg class="plus"><use xlink:href="#plus"></use></svg>
+                                                </span>
+                                            </div>
+                                            <input type="number" id="quantity_001" class="input-text text-center" step="1" min="1" name="quantity" value="1" title="Cantidad">
+                                            <div class="qty-number qty-number-minus d-flex justify-content-center align-items-center text-center">
+                                                <span class="increase-qty minus">
+                                                    <svg class="minus"><use xlink:href="#minus"></use></svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button type="submit" class="btn btn-medium btn-black hvr-sweep-to-right">Agregar al carrito</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="categories d-flex flex-wrap pt-3">
+                                <strong class="pe-2">Categorías:</strong>
+                                <a href="#" title="categorias">Educativos,</a>
+                                <a href="#" title="categorias">Construcción,</a>
+                                <a href="#" title="categorias">4-8 años</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="intro" class="position-relative mt-4">
+    <div class="container-lg">
+        <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+
+
+                <div class="swiper-slide">
+                    <div class="card d-flex flex-row align-items-end border-0 large jarallax-keep-img">
+                        <img src="~/Template/Images/card-image1.jpg" class="img-fluid" alt="Bienvenidos a Frijolito">
+                        <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
+                            <h2 class="card-title display-3 light">Juguetes para Todos</h2>
+                            <a href="#" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Tienda</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="row g-4">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+                                <img src="~/Template/Images/card-image2.jpg" class="img-fluid" alt="Juguetes Educativos">
+                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
+                                    <h2 class="card-title style-2 display-4 light">Juguetes Educativos</h2>
+                                    <a href="#" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+                                <img src="~/Template/Images/card-image3.jpg" class="img-fluid" alt="Juegos de Mesa">
+                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
+                                    <h2 class="card-title style-2 display-4 light">Juegos de Mesa</h2>
+                                    <a href="#" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%-- SLIDE 3 — Banner grande vehículos --%>
+                <%-- Imagen categoría vehículos — reemplazar con imagen real --%>
+                <div class="swiper-slide">
+                    <div class="card d-flex flex-row align-items-end border-0 large jarallax-keep-img">
+                        <img src="~/Content/Images/card-image2.jpg" class="img-fluid" alt="Vehículos y Autos">
+                        <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
+                            <h2 class="card-title display-3 light">Vehículos y Autos</h2>
+                            <a href="#" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
+                        </div>
+                    </div>
+                </div>
+
+                <%-- SLIDE 4 — Dos banners: Para Niños y Para Niñas --%>
+                <div class="swiper-slide">
+                    <div class="row g-4">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+
+                                <img src="~/Template/Images/JugueteNiña.webp" class="img-fluid" alt="Para Niños">
+                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
+                                    <h2 class="card-title style-2 display-4 light">Para Niños</h2>
+                                    <a href="#" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
+                                <%-- Imagen sección niñas — reemplazar con imagen real --%>
+                                <img src="~/Content/Images/card-image2.jpg" class="img-fluid" alt="Para Niñas">
+                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
+                                    <h2 class="card-title style-2 display-4 light">Para Niñas</h2>
+                                    <a href="#" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><%-- /swiper-wrapper --%>
+        </div><%-- /swiper --%>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
