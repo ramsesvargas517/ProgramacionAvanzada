@@ -227,30 +227,37 @@
                     <div class="offcanvas-body">
                         <ul id="navbar" class="navbar-nav fw-bold justify-content-end align-items-center flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link me-5 active" href="@Url.Action("Index", "Home")">Inicio</a>
+                                <a class="nav-link me-5 active" href="@Url.Action("Index","Home")">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link me-5" href="#">Niños</a>
+                                <a class="nav-link me-5" href="@Url.Action("Ninos","Home")">Ni&#241;os</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link me-5" href="#">Niñas</a>
+                                <a class="nav-link me-5" href="@Url.Action("Ninas","Home")">Ni&#241;as</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link me-5 dropdown-toggle border-0" href="#"
-                                   data-bs-toggle="dropdown" aria-expanded="false">Categorías</a>
+                                   data-bs-toggle="dropdown" aria-expanded="false">Categor&#237;as</a>
                                 <ul class="dropdown-menu fw-bold">
-                                    <li><a class="dropdown-item" href="#">Educativos</a></li>
-                                    <li><a class="dropdown-item" href="#">Muñecos y Figuras</a></li>
-                                    <li><a class="dropdown-item" href="#">Juegos de Mesa</a></li>
-                                    <li><a class="dropdown-item" href="#">Vehículos</a></li>
-                                    <li><a class="dropdown-item" href="#">Arte y Manualidades</a></li>
+                                    @if (ViewBag.Categorias != null)
+                                    {
+                                        foreach (var cat in ViewBag.Categorias as List<ProgramacionAvanzadaG8.Models.CategoriaModel>)
+                                        {
+                                            <li>
+                                                <a class="dropdown-item"
+                                                   href="@Url.Action("Tienda","Home", new { categoriaId = cat.CategoriaId })">
+                                                    @cat.Nombre
+                                                </a>
+                                            </li>
+                                        }
+                                    }
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link me-5" href="#">Tienda</a>
+                                <a class="nav-link me-5" href="@Url.Action("Tienda","Home")">Tienda</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link me-5" href="#">Ofertas</a>
+                                <a class="nav-link me-5" href="@Url.Action("Tienda","Home")">Ofertas</a>
                             </li>
                         </ul>
                     </div>

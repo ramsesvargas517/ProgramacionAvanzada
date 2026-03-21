@@ -3,10 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProgramacionAvanzadaG8.Models
 {
-    /// <summary>
-    /// Modelo que mapea la tabla Cliente de la BD Frijolito.
-    /// Tabla: Cliente (cliente_id, identificacion, nombre, apellido, telefono, email, direccion, fecha_registro)
-    /// </summary>
+
     public class ClienteModel
     {
         public int ClienteId { get; set; }

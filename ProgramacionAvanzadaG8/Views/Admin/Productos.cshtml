@@ -1,0 +1,121 @@
+@model List<ProgramacionAvanzadaG8.Models.ProductoModel>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Productos";
+}
+
+@helper BadgeGenero(string genero)
+{
+    if (genero == "Nino")
+    {<span class="badge" style="background:rgba(75,158,255,.15);color:#4b9eff;">&#128309; Ni&#241;os</span> }
+    else if (genero == "Nina")
+    { <span class="badge" style="background:rgba(233,30,140,.1);color:#e91e8c;">&#129337; Ni&#241;as</span> }
+    else
+    { <span class="badge badge-warning">&#128993; Unisex</span>}
+}
+
+<div class="card">
+    <div class="card-header" style="flex-wrap:wrap;gap:10px;">
+        <span class="card-title">Productos</span>
+
+        @* Filtros — sin @if dentro del @using *@
+        @using (Html.BeginForm("Productos", "Admin", FormMethod.Get,
+            new { style = "display:flex;gap:8px;align-items:center;flex-wrap:wrap;" }))
+        {
+            @Html.DropDownList("categoriaId", (SelectList)ViewBag.Categorias,
+                     "&#8212; Categor&#237;a &#8212;",
+                     new { @class = "form-control", style = "width:170px;padding:6px 12px;" })
+
+            @Html.DropDownList("genero", (SelectList)ViewBag.GenerosFilter,
+                     null,
+                     new { @class = "form-control", style = "width:160px;padding:6px 12px;" })
+
+            <button type="submit" class="btn btn-ghost btn-sm">Filtrar</button>
+        }
+
+        @* Limpiar fuera del using *@
+        @{
+            bool hayFiltro = ViewBag.CategoriaFiltro != null
+                          || !string.IsNullOrEmpty(ViewBag.GeneroFiltro as string);
+        }
+        @if (hayFiltro)
+        {
+            <a href="@Url.Action("Productos","Admin")" class="btn btn-ghost btn-sm">&#10005; Limpiar</a>
+        }
+
+        <div class="card-actions">
+            <a href="@Url.Action("CrearProducto","Admin")" class="btn btn-primary">&#43; Nuevo Producto</a>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        @if (Model == null || !Model.Any())
+        {
+            <div style="padding:48px;text-align:center;color:var(--text-secondary);">
+                <div style="font-size:40px;margin-bottom:12px;">&#128230;</div>
+                <p>No hay productos con esos filtros.</p>
+                <a href="@Url.Action("CrearProducto","Admin")" class="btn btn-primary" style="margin-top:12px;">Crear el primero</a>
+            </div>
+        }
+        else
+        {
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>SKU</th>
+                        <th>Nombre</th>
+                        <th>Categor&#237;a</th>
+                        <th>Dirigido a</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var p in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (!string.IsNullOrEmpty(p.Imagen))
+                                {
+                                    <img src="@Url.Content(p.Imagen)" alt="@p.Nombre" class="product-thumb" />
+                                }
+                                else
+                                {
+                                    <div class="product-thumb-placeholder">&#128247;</div>
+                                }
+                            </td>
+                            <td style="font-family:monospace;font-size:12px;color:var(--text-secondary);">@p.Sku</td>
+                            <td style="font-weight:600;">@p.Nombre</td>
+                            <td><span class="badge badge-info">@p.CategoriaNombre</span></td>
+                            <td>@BadgeGenero(p.Genero)</td>
+                            <td style="font-weight:700;color:var(--accent);">&#8353;@p.Precio.ToString("N0")</td>
+                            <td>
+                                @if (p.Stock <= 5)
+                                {<span class="badge badge-danger">@p.Stock</span> }
+                            else
+                            { <span class="badge badge-success">@p.Stock</span>}
+                            </td>
+                            <td>
+                                <div style="display:flex;gap:6px;">
+                                    <a href="@Url.Action("EditarProducto","Admin", new { id = p.ProductoId })"
+                                       class="btn btn-ghost btn-sm">Editar</a>
+                                    @using (Html.BeginForm("EliminarProducto", "Admin", FormMethod.Post, new { style = "display:inline;" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@p.ProductoId" />
+                                        <button type="submit" class="btn btn-danger btn-sm"
+                                                onclick="return confirm('Eliminar este producto?')">
+                                            Eliminar
+                                        </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

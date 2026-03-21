@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,40 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAIMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-28T00:02:12.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-27T23:56:20.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAABYAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAiwMgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-27T23:23:49.971Z",
+              "WhenOpened": "2026-03-21T18:06:14.302Z",
               "EditorCaption": ""
             }
           ]

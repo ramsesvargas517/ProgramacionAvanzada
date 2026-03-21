@@ -1,0 +1,72 @@
+@model List<ProgramacionAvanzadaG8.Models.CategoriaModel>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Categorias";
+}
+
+<div class="card">
+    <div class="card-header">
+        <span class="card-title">Todas las categor&#237;as</span>
+        <div class="card-actions">
+            <a href="@Url.Action("CrearCategoria","Admin")" class="btn btn-primary">&#43; Nueva Categor&#237;a</a>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        @if (Model == null || !Model.Any())
+        {
+            <div style="padding:48px;text-align:center;color:var(--text-secondary);">
+                <div style="font-size:40px;margin-bottom:12px;">&#127991;</div>
+                <p>No hay categor&#237;as registradas.</p>
+                <a href="@Url.Action("CrearCategoria","Admin")" class="btn btn-primary" style="margin-top:12px;">Crear la primera</a>
+            </div>
+        }
+        else
+        {
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripci&#243;n</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (!string.IsNullOrEmpty(c.Imagen))
+                                {
+                                    <img src="@Url.Content(c.Imagen)" alt="@c.Nombre" class="product-thumb" />
+                                }
+                                else
+                                {
+                                    <div class="product-thumb-placeholder">&#127991;</div>
+                                }
+                            </td>
+                            <td style="font-weight:600;">@c.Nombre</td>
+                            <td style="color:var(--text-secondary);max-width:300px;">@c.Descripcion</td>
+                            <td>
+                                <div style="display:flex;gap:6px;">
+                                    <a href="@Url.Action("EditarCategoria","Admin", new { id = c.CategoriaId })"
+                                       class="btn btn-ghost btn-sm">Editar</a>
+                                    @using (Html.BeginForm("EliminarCategoria", "Admin", FormMethod.Post, new { style = "display:inline;" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@c.CategoriaId" />
+                                        <button type="submit" class="btn btn-danger btn-sm"
+                                                onclick="return confirm('Eliminar esta categoria?')">
+                                            Eliminar
+                                        </button>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

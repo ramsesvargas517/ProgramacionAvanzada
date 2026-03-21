@@ -1,0 +1,67 @@
+@* ============================================================ *@
+@* ARCHIVO: Usuarios.cshtml                                    *@
+@* Ruta: Views/Admin/Usuarios.cshtml                           *@
+@* ============================================================ *@
+@model List<ProgramacionAvanzadaG8.Controllers.UsuarioAdminModel>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Usuarios";
+}
+
+<div class="card">
+    <div class="card-header">
+        <span class="card-title">Usuarios registrados</span>
+        <span class="badge badge-info" style="margin-left:10px;">@Model.Count total</span>
+    </div>
+
+    <div class="table-wrap">
+        @if (Model == null || Model.Count == 0)
+        {
+            <div style="padding:48px;text-align:center;color:var(--text-secondary);">
+                <div style="font-size:40px;margin-bottom:12px;">👤</div>
+                <p>No hay usuarios registrados.</p>
+            </div>
+        }
+        else
+        {
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Avatar</th>
+                        <th>Username</th>
+                        <th>Nombre completo</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var u in Model)
+                    {
+                        <tr>
+                            <td style="color:var(--text-secondary);font-size:12px;">@u.UsuarioId</td>
+                            <td>
+                                <div style="width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#000;">
+                                    @u.Nombre.Substring(0,1).ToUpper()
+                                </div>
+                            </td>
+                            <td style="font-family:monospace;font-size:13px;">@u.Username</td>
+                            <td style="font-weight:600;">@u.Nombre @u.Apellido</td>
+                            <td style="color:var(--text-secondary);">@u.Email</td>
+                            <td>
+                                @if (u.Rol == "Administrador")
+                                {
+                                    <span class="badge badge-warning">⭐ @u.Rol</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-info">@u.Rol</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

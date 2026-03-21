@@ -1,0 +1,107 @@
+﻿@using ProgramacionAvanzadaG8.Models
+@{
+    var productos = ViewBag.Productos as List<ProductoModel> ?? new List<ProductoModel>();
+    var categorias = ViewBag.Categorias as List<CategoriaModel> ?? new List<CategoriaModel>();
+    var generoActivo = ViewBag.GeneroActivo as string;
+    ViewBag.Title = ViewBag.Title ?? "Tienda";
+}
+
+<section class="py-5">
+    <div class="container-lg">
+
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <h2 class="mb-0">@ViewBag.Title</h2>
+
+            @* Filtros *@
+            @using (Html.BeginForm(generoActivo == "Nino" ? "Ninos" : generoActivo == "Nina" ? "Ninas" : "Tienda",
+                "Home", FormMethod.Get, new { @class = "d-flex gap-2 flex-wrap" }))
+            {
+                <select name="categoriaId" class="form-select form-select-sm" style="width:auto;"
+                        onchange="this.form.submit()">
+                    <option value="">Todas las categor&#237;as</option>
+                    @foreach (var c in categorias)
+                    {
+                        var sel = (ViewBag.CatActiva != null && (int)ViewBag.CatActiva == c.CategoriaId) ? "selected" : "";
+                        <option value="@c.CategoriaId" @sel>@c.Nombre</option>
+                    }
+                </select>
+            }
+        </div>
+
+        @* Tabs genero *@
+        <div class="d-flex gap-2 mb-4">
+            <a href="@Url.Action("Tienda","Home")"
+               class="btn btn-sm @(generoActivo == null ? "btn-dark" : "btn-outline-dark")">Todos</a>
+            <a href="@Url.Action("Ninos","Home")"
+               class="btn btn-sm @(generoActivo == "Nino" ? "btn-dark" : "btn-outline-dark")">Ni&#241;os</a>
+            <a href="@Url.Action("Ninas","Home")"
+               class="btn btn-sm @(generoActivo == "Nina" ? "btn-dark" : "btn-outline-dark")">Ni&#241;as</a>
+        </div>
+
+        @if (!productos.Any())
+        {
+            <div class="text-center py-5">
+                <p class="text-muted">No hay productos disponibles en esta secci&#243;n.</p>
+                <a href="@Url.Action("Tienda","Home")" class="btn btn-outline-dark">Ver todos</a>
+            </div>
+        }
+        else
+        {
+            <div class="row g-4">
+                @foreach (var p in productos)
+                {
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card border-0 h-100" style="cursor:pointer;"
+                             data-nombre="@p.Nombre"
+                             data-precio="@p.Precio.ToString("N0")"
+                             data-desc="@(p.Descripcion ?? "")"
+                             data-sku="@p.Sku"
+                             data-cat="@p.CategoriaNombre"
+                             data-img="@(string.IsNullOrEmpty(p.Imagen) ? "" : p.Imagen)"
+                             data-bs-toggle="modal" data-bs-target="#modaltoggle">
+                            <div style="height:220px;background:#f8f8f8;border-radius:8px;overflow:hidden;">
+                                @if (!string.IsNullOrEmpty(p.Imagen))
+                                {
+                                    <img src="@p.Imagen" alt="@p.Nombre"
+                                         style="width:100%;height:100%;object-fit:contain;padding:10px;" />
+                                }
+                                else
+                                {
+                                    <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:48px;">&#128247;</div>
+                                }
+                            </div>
+                            <div class="card-body px-0">
+                                <small class="text-muted">@p.CategoriaNombre</small>
+                                <h6 class="mb-1" style="font-size:14px;font-weight:600;">@p.Nombre</h6>
+                                <strong>&#8353;@p.Precio.ToString("N0")</strong>
+                                @if (p.Stock <= 5 && p.Stock > 0)
+                                {
+                                    <small class="text-danger d-block">&#250;ltimas @p.Stock unidades</small>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</section>
+
+@section Scripts {
+    <script>document.querySelectorAll('[data-nombre]').forEach(function(card) {
+        card.addEventListener('click', function() {
+            var img = this.dataset.img;
+            var el  = document.getElementById('modalImg');
+            if (el) {
+                el.src = img || '';
+                el.style.display = img ? 'block' : 'none';
+            }
+            var set = function(id, val) { var e = document.getElementById(id); if(e) e.textContent = val; };
+            set('modalNombre', this.dataset.nombre || '');
+            set('modalPrecio', '\u20a1' + (this.dataset.precio || ''));
+            set('modalDesc',   this.dataset.desc   || '');
+            set('modalSku',    this.dataset.sku    || '');
+            set('modalCat',    this.dataset.cat    || '');
+        });
+    });</script>
+}

@@ -2,10 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProgramacionAvanzadaG8.Models
 {
-    /// <summary>
-    /// Modelo que mapea la tabla Usuario de la BD Frijolito.
-    /// Tabla: Usuario (usuario_id, username, password_hash, nombre, apellido, email)
-    /// </summary>
+
     public class UsuarioModel
     {
         public int UsuarioId { get; set; }

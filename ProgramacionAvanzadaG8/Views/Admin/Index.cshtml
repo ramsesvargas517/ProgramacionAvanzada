@@ -1,0 +1,87 @@
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-icon orange">📦</div>
+        <div class="stat-info">
+            <div class="stat-value">@ViewBag.TotalProductos</div>
+            <div class="stat-label">Productos totales</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon blue">🔵</div>
+        <div class="stat-info">
+            <div class="stat-value">@ViewBag.TotalNinos</div>
+            <div class="stat-label">Para Niños</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(255,182,193,.15);color:#e91e8c;">🩷</div>
+        <div class="stat-info">
+            <div class="stat-value">@ViewBag.TotalNinas</div>
+            <div class="stat-label">Para Niñas</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon" style="background:rgba(255,215,0,.15);color:#f4a224;">🟡</div>
+        <div class="stat-info">
+            <div class="stat-value">@ViewBag.TotalUnisex</div>
+            <div class="stat-label">Unisex</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon blue">🏷️</div>
+        <div class="stat-info">
+            <div class="stat-value">@ViewBag.TotalCategorias</div>
+            <div class="stat-label">Categorías</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon green">👤</div>
+        <div class="stat-info">
+            <div class="stat-value">@ViewBag.TotalUsuarios</div>
+            <div class="stat-label">Usuarios</div>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon red">⚠️</div>
+        <div class="stat-info">
+            <div class="stat-value">@ViewBag.StockBajo</div>
+            <div class="stat-label">Stock bajo (≤5)</div>
+        </div>
+    </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div class="card">
+        <div class="card-header"><span class="card-title">Accesos rápidos</span></div>
+        <div class="card-body" style="display:flex;flex-direction:column;gap:10px;">
+            <a href="@Url.Action("CrearProducto","Admin")" class="btn btn-primary" style="justify-content:center;">➕ Nuevo Producto</a>
+            <a href="@Url.Action("Productos","Admin", new { genero = "Nino" })" class="btn btn-ghost" style="justify-content:center;">🔵 Ver productos Niños</a>
+            <a href="@Url.Action("Productos","Admin", new { genero = "Nina" })" class="btn btn-ghost" style="justify-content:center;">🩷 Ver productos Niñas</a>
+            <a href="@Url.Action("CrearCategoria","Admin")" class="btn btn-ghost" style="justify-content:center;">➕ Nueva Categoría</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header"><span class="card-title">Sistema</span></div>
+        <div class="card-body">
+            <table style="width:100%;font-size:13px;">
+                <tr style="border-bottom:1px solid var(--border);">
+                    <td style="padding:8px 0;color:var(--text-secondary);">Administrador</td>
+                    <td style="padding:8px 0;font-weight:600;">@Session["NombreAdmin"]</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);">
+                    <td style="padding:8px 0;color:var(--text-secondary);">Rol</td>
+                    <td style="padding:8px 0;"><span class="badge badge-success">@Session["RolAdmin"]</span></td>
+                </tr>
+                <tr>
+                    <td style="padding:8px 0;color:var(--text-secondary);">Fecha</td>
+                    <td style="padding:8px 0;">@DateTime.Now.ToString("dd/MM/yyyy HH:mm")</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,151 @@
+@model ProgramacionAvanzadaG8.Models.ProductoModel
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Nuevo Producto";
+}
+
+@using (Html.BeginForm("CrearProducto", "Admin", FormMethod.Post,
+    new { enctype = "multipart/form-data", id = "formProducto" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div style="display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start;">
+
+        <!-- Datos del producto -->
+        <div class="card">
+            <div class="card-header"><span class="card-title">Información del producto</span></div>
+            <div class="card-body">
+                @Html.ValidationSummary(true, "", new { @class = "validation-summary-errors" })
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Sku, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.Sku, new { @class = "form-control", placeholder = "Ej: FRJ-9999" })
+                        @Html.ValidationMessageFor(m => m.Sku)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.CategoriaId, new { @class = "form-label" })
+                        @Html.DropDownListFor(m => m.CategoriaId, (SelectList)ViewBag.Categorias, "— Seleccionar —", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.CategoriaId)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Nombre, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", placeholder = "Nombre del producto" })
+                    @Html.ValidationMessageFor(m => m.Nombre)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Descripcion, new { @class = "form-label" })
+                    @Html.TextAreaFor(m => m.Descripcion, new { @class = "form-control", placeholder = "Descripción breve", rows = 3 })
+                    @Html.ValidationMessageFor(m => m.Descripcion)
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Precio, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.Precio, new { @class = "form-control", placeholder = "0.00", type = "number", step = "0.01", min = "0.01" })
+                        @Html.ValidationMessageFor(m => m.Precio)
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Stock, new { @class = "form-label" })
+                        @Html.TextBoxFor(m => m.Stock, new { @class = "form-control", placeholder = "0", type = "number", min = "0" })
+                        @Html.ValidationMessageFor(m => m.Stock)
+                    </div>
+                </div>
+
+                <!-- ── GÉNERO ── -->
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Genero, new { @class = "form-label" })
+                    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px;">
+                        @foreach (var g in ViewBag.Generos as List<System.Web.Mvc.SelectListItem>)
+                        {
+                            var isChecked = g.Selected || (Model.Genero == g.Value);
+                            <label style="display:flex;align-items:center;gap:8px;padding:10px 16px;
+                                          border:2px solid var(--border);border-radius:10px;cursor:pointer;
+                                          transition:border-color .15s,background .15s;font-weight:500;
+                                          @(isChecked ? "border-color:var(--accent);background:var(--accent-soft);" : "")">
+                                <input type="radio" name="Genero" value="@g.Value"
+                                       @(isChecked ? "checked" : "")
+                                       style="display:none;" class="genero-radio" />
+                                @g.Text
+                            </label>
+                        }
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Genero)
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Imagen + acciones -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+            <div class="card">
+                <div class="card-header"><span class="card-title">Imagen del producto</span></div>
+                <div class="card-body">
+                    <div class="dropzone" id="dropzone" onclick="document.getElementById('imgInput').click()">
+                        <div class="dropzone-icon">🖼️</div>
+                        <p><strong>Haz clic</strong> o arrastra una imagen aquí</p>
+                        <p style="font-size:11px;margin-top:6px;">JPG, PNG, WebP · Máx 3 MB</p>
+                    </div>
+                    <div id="previewContainer" style="display:none;text-align:center;margin-top:12px;">
+                        <div class="dropzone-preview">
+                            <img id="previewImg" src="" alt="Vista previa" />
+                            <button type="button" class="dropzone-remove" onclick="limpiarImg()">×</button>
+                        </div>
+                    </div>
+                    @Html.TextBoxFor(m => m.ImagenFile, new { type = "file", accept = "image/*", id = "imgInput", style = "display:none;" })
+                    @Html.ValidationMessageFor(m => m.ImagenFile)
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body" style="display:flex;flex-direction:column;gap:10px;">
+                    <button type="submit" class="btn btn-primary" style="justify-content:center;">💾 Guardar Producto</button>
+                    <a href="@Url.Action("Productos","Admin")" class="btn btn-ghost" style="justify-content:center;">Cancelar</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+@section Scripts {
+    <script>
+        // Radio buttons estilizados
+        document.querySelectorAll('.genero-radio').forEach(function (radio) {
+            radio.addEventListener('change', function () {
+                document.querySelectorAll('.genero-radio').forEach(function (r) {
+                    var lbl = r.parentElement;
+                    lbl.style.borderColor = '';
+                    lbl.style.background = '';
+                });
+                var lbl = this.parentElement;
+                lbl.style.borderColor = 'var(--accent)';
+                lbl.style.background = 'var(--accent-soft)';
+            });
+        });
+
+        // Dropzone
+        var input = document.getElementById('imgInput'),
+            preview = document.getElementById('previewImg'),
+            container = document.getElementById('previewContainer'),
+            dropzone = document.getElementById('dropzone');
+
+        input.addEventListener('change', function () { mostrarPreview(this.files[0]); });
+        dropzone.addEventListener('dragover', function (e) { e.preventDefault(); dropzone.classList.add('dragover'); });
+        dropzone.addEventListener('dragleave', function () { dropzone.classList.remove('dragover'); });
+        dropzone.addEventListener('drop', function (e) {
+            e.preventDefault(); dropzone.classList.remove('dragover');
+            var f = e.dataTransfer.files[0];
+            if (f) { var dt = new DataTransfer(); dt.items.add(f); input.files = dt.files; mostrarPreview(f); }
+        });
+        function mostrarPreview(file) {
+            var r = new FileReader();
+            r.onload = function (e) { preview.src = e.target.result; container.style.display = 'block'; dropzone.style.display = 'none'; };
+            r.readAsDataURL(file);
+        }
+        function limpiarImg() { input.value = ''; preview.src = ''; container.style.display = 'none'; dropzone.style.display = 'block'; }
+    </script>
+}

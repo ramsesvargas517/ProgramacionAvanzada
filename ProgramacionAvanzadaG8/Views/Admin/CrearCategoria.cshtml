@@ -1,0 +1,84 @@
+@* ============================================================ *@
+@* ARCHIVO: CrearCategoria.cshtml                              *@
+@* Ruta: Views/Admin/CrearCategoria.cshtml                     *@
+@* ============================================================ *@
+@model ProgramacionAvanzadaG8.Models.CategoriaModel
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Nueva Categoría";
+}
+
+@using (Html.BeginForm("CrearCategoria", "Admin", FormMethod.Post,
+    new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div style="max-width:700px;">
+        <div class="card">
+            <div class="card-header">
+                <span class="card-title">Información de la categoría</span>
+            </div>
+            <div class="card-body">
+                @Html.ValidationSummary(true, "", new { @class = "validation-summary-errors" })
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Nombre,   new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", placeholder = "Nombre de la categoría" })
+                    @Html.ValidationMessageFor(m => m.Nombre)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Descripcion,    new { @class = "form-label" })
+                    @Html.TextAreaFor(m => m.Descripcion, new { @class = "form-control", placeholder = "Descripción breve", rows = 3 })
+                    @Html.ValidationMessageFor(m => m.Descripcion)
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Imagen (opcional)</label>
+                    <div class="dropzone" id="dropzone" onclick="document.getElementById('imgInput').click()">
+                        <div class="dropzone-icon">🖼️</div>
+                        <p><strong>Haz clic</strong> o arrastra la imagen aquí</p>
+                        <p style="font-size:11px;margin-top:6px;">JPG, PNG, WebP · Máx 3 MB</p>
+                    </div>
+                    <div id="previewContainer" style="display:none;text-align:center;margin-top:12px;">
+                        <div class="dropzone-preview">
+                            <img id="previewImg" src="" />
+                            <button type="button" class="dropzone-remove" onclick="limpiarImg()">×</button>
+                        </div>
+                    </div>
+                    @Html.TextBoxFor(m => m.ImagenFile,
+                        new { type = "file", accept = "image/*", id = "imgInput",
+                              style = "display:none;" })
+                    @Html.ValidationMessageFor(m => m.ImagenFile)
+                </div>
+
+                <div style="display:flex;gap:10px;margin-top:8px;">
+                    <button type="submit" class="btn btn-primary">💾 Guardar</button>
+                    <a href="@Url.Action("Categorias","Admin")" class="btn btn-ghost">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+<script>
+    var input = document.getElementById('imgInput');
+    var preview = document.getElementById('previewImg');
+    var container = document.getElementById('previewContainer');
+    var dropzone = document.getElementById('dropzone');
+
+    input.addEventListener('change', function () { mostrarPreview(this.files[0]); });
+    dropzone.addEventListener('dragover', function(e){e.preventDefault();dropzone.classList.add('dragover');});
+    dropzone.addEventListener('dragleave', function(){dropzone.classList.remove('dragover');});
+    dropzone.addEventListener('drop', function(e){
+        e.preventDefault(); dropzone.classList.remove('dragover');
+        var f = e.dataTransfer.files[0];
+        if(f){ var dt=new DataTransfer(); dt.items.add(f); input.files=dt.files; mostrarPreview(f); }
+    });
+    function mostrarPreview(file){
+        var r=new FileReader(); r.onload=function(e){ preview.src=e.target.result; container.style.display='block'; dropzone.style.display='none'; }; r.readAsDataURL(file);
+    }
+    function limpiarImg(){ input.value=''; preview.src=''; container.style.display='none'; dropzone.style.display='block'; }
+</script>
+}
