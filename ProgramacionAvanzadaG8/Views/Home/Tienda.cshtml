@@ -74,9 +74,32 @@
                                 <small class="text-muted">@p.CategoriaNombre</small>
                                 <h6 class="mb-1" style="font-size:14px;font-weight:600;">@p.Nombre</h6>
                                 <strong>&#8353;@p.Precio.ToString("N0")</strong>
+
                                 @if (p.Stock <= 5 && p.Stock > 0)
                                 {
                                     <small class="text-danger d-block">&#250;ltimas @p.Stock unidades</small>
+                                }
+
+                                @if (p.Stock > 0)
+                                {
+                                    <div class="mt-2">
+                                        @using (Html.BeginForm("Agregar", "Carrito", FormMethod.Post))
+                                        {
+                                            @Html.Hidden("productoId", p.ProductoId)
+                                            <input type="hidden" name="cantidad" value="1" />
+                                            <button type="submit" class="btn btn-sm btn-dark w-100">
+                                                Agregar al carrito
+                                            </button>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="mt-2">
+                                        <button type="button" class="btn btn-sm btn-secondary w-100" disabled>
+                                            Sin stock
+                                        </button>
+                                    </div>
                                 }
                             </div>
                         </div>

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Confirmacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="alert alert-success">
+        <h3>Compra realizada con exito</h3>
+        <p>Tu numero de venta es: <strong>@ViewBag.VentaId</strong></p>
+    </div>
+
+    <a href="@Url.Action("Tienda", "Home")" class="btn btn-primary">Seguir comprando</a>
+    <a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Ir al inicio</a>
+</div>

@@ -1,0 +1,114 @@
+﻿@model ProgramacionAvanzadaG8.Models.CheckoutViewModel
+
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal total = Model.ItemsCarrito != null ? Model.ItemsCarrito.Sum(x => x.Subtotal) : 0;
+}
+
+<div class="container mt-5 mb-5">
+    <h2>Finalizar Compra</h2>
+    <hr />
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-7">
+            @using (Html.BeginForm("Checkout", "Carrito", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.NombreCliente)
+                    @Html.TextBoxFor(m => m.NombreCliente, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.NombreCliente, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.ApellidoCliente)
+                    @Html.TextBoxFor(m => m.ApellidoCliente, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ApellidoCliente, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.Identificacion)
+                    @Html.TextBoxFor(m => m.Identificacion, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Identificacion, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.Telefono)
+                    @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Telefono, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.Direccion)
+                    @Html.TextAreaFor(m => m.Direccion, new { @class = "form-control", rows = 3 })
+                    @Html.ValidationMessageFor(m => m.Direccion, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.MetodoPagoId)
+                    @Html.DropDownListFor(
+                        m => m.MetodoPagoId,
+                        ViewBag.MetodosPago as List<SelectListItem>,
+                        "-- Seleccione metodo de pago --",
+                        new { @class = "form-control" }
+                    )
+                    @Html.ValidationMessageFor(m => m.MetodoPagoId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.ReferenciaPago)
+                    @Html.TextBoxFor(m => m.ReferenciaPago, new { @class = "form-control", placeholder = "Ejemplo: SINPE12345 o ultimos 4 digitos" })
+                    @Html.ValidationMessageFor(m => m.ReferenciaPago, "", new { @class = "text-danger" })
+                </div>
+
+                <button type="submit" class="btn btn-success">Confirmar compra</button>
+                <a href="@Url.Action("Index", "Carrito")" class="btn btn-secondary">Volver al carrito</a>
+            }
+        </div>
+
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header">
+                    <strong>Resumen del pedido</strong>
+                </div>
+                <div class="card-body">
+                    @if (Model.ItemsCarrito != null && Model.ItemsCarrito.Any())
+                    {
+                        foreach (var item in Model.ItemsCarrito)
+                        {
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>@item.Nombre x @item.Cantidad</span>
+                                <span>₡@item.Subtotal.ToString("N2")</span>
+                            </div>
+                        }
+
+                        <hr />
+                        <div class="d-flex justify-content-between">
+                            <strong>Total</strong>
+                            <strong>₡@total.ToString("N2")</strong>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

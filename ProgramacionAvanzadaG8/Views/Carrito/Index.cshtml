@@ -1,0 +1,97 @@
+﻿@model List<ProgramacionAvanzadaG8.Models.CarritoItemModel>
+
+@{
+    ViewBag.Title = "Carrito";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal total = Model.Sum(x => x.Subtotal);
+}
+
+<div class="container mt-5 mb-5">
+    <h2>Carrito de Compras</h2>
+    <hr />
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info">
+            Tu carrito esta vacio.
+        </div>
+
+        <a href="@Url.Action("Tienda", "Home")" class="btn btn-primary">
+            Seguir comprando
+        </a>
+    }
+    else
+    {
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>SKU</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.Imagen))
+                            {
+                                <img src="@Url.Content(item.Imagen)" alt="@item.Nombre" style="width:80px; height:80px; object-fit:cover;" />
+                            }
+                        </td>
+                        <td>@item.SKU</td>
+                        <td>@item.Nombre</td>
+                        <td>₡@item.Precio.ToString("N2")</td>
+                        <td>
+                            @using (Html.BeginForm("ActualizarCantidad", "Carrito", FormMethod.Post))
+                            {
+                                @Html.Hidden("productoId", item.ProductoId)
+                                <input type="number" name="cantidad" value="@item.Cantidad" min="1" max="@item.StockDisponible" class="form-control" style="width:100px; display:inline-block;" />
+                                <button type="submit" class="btn btn-sm btn-warning mt-1">Actualizar</button>
+                            }
+                        </td>
+                        <td>₡@item.Subtotal.ToString("N2")</td>
+                        <td>
+                            @using (Html.BeginForm("Eliminar", "Carrito", FormMethod.Post))
+                            {
+                                @Html.Hidden("productoId", item.ProductoId)
+                                <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="text-end mb-3">
+            <h4>Total: ₡@total.ToString("N2")</h4>
+        </div>
+
+        <a href="@Url.Action("Tienda", "Home")" class="btn btn-secondary">
+            Seguir comprando
+        </a>
+
+        <a href="@Url.Action("Checkout", "Carrito")" class="btn btn-success">
+            Continuar al pago
+        </a>
+    }
+</div>
