@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\",
+  "WorkspaceRootPath": "C:\\Users\\lucas\\source\\repos\\proyecto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\users\\lucas\\source\\repos\\proyecto\\programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -28,13 +28,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\lucas\\source\\repos\\proyecto\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\lucas\\source\\repos\\proyecto\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAALgAAAAAAAAAAAAiwMgAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMBAAAAAAAAAAAswBsBAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-21T18:06:14.302Z",
+              "WhenOpened": "2026-03-24T20:47:38.735Z",
               "EditorCaption": ""
             }
           ]

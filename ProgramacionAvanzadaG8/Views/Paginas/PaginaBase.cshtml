@@ -1,0 +1,15 @@
+@{
+    ViewBag.Title = ViewBag.Titulo;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container pagina-footer-contenido" style="padding:40px 0;">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="margin-bottom:20px;">@ViewBag.Encabezado</h2>
+            <p style="font-size:16px; line-height:1.8;">
+                @ViewBag.Contenido
+            </p>
+        </div>
+    </div>
+</div>

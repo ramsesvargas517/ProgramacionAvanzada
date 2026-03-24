@@ -13,3 +13,37 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.footer-area h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.footer-area ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+    .footer-area ul li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+
+        .footer-area ul li a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s ease;
+        }
+
+            .footer-area ul li a:hover {
+                opacity: 0.8;
+                text-decoration: underline;
+            }
+
+.pagina-footer-contenido h2 {
+    font-weight: 700;
+}
+
+.pagina-footer-contenido p {
+    color: #444;
+}
