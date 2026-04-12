@@ -12,17 +12,9 @@ namespace ProgramacionAvanzadaG8.EntityFramework
     using System;
     using System.Collections.Generic;
     
-    public partial class Detalle_Venta
+    public partial class Rol
     {
-        public int detalle_venta_id { get; set; }
-        public int venta_id { get; set; }
-        public int producto_id { get; set; }
-        public int cantidad { get; set; }
-        public decimal precio_unitario { get; set; }
-        public Nullable<decimal> descuento_linea { get; set; }
-        public decimal total_linea { get; set; }
-    
-        public virtual Producto Producto { get; set; }
-        public virtual Venta Venta { get; set; }
+        public int rol_id { get; set; }
+        public string nombre { get; set; }
     }
 }

@@ -4,15 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5afc26dd69744976af5dc93890af1cfe" Name="Diagram1">
-        <EntityTypeShape EntityType="FrijolitoModel.Categoria" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="FrijolitoModel.Cliente" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FrijolitoModel.Detalle_Venta" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="FrijolitoModel.Metodo_Pago" Width="1.5" PointX="6" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="FrijolitoModel.Pago" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="FrijolitoModel.Producto" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+      <Diagram DiagramId="e9e178caf5b44cdfbddb02af5b3ec8db" Name="Diagram1">
+        <EntityTypeShape EntityType="FrijolitoModel.Categoria" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="FrijolitoModel.Cliente" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FrijolitoModel.Detalle_Venta" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FrijolitoModel.Metodo_Pago" Width="1.5" PointX="6" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FrijolitoModel.Pago" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FrijolitoModel.Producto" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FrijolitoModel.Rol" Width="1.5" PointX="5.75" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="FrijolitoModel.Usuario" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FrijolitoModel.Venta" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FrijolitoModel.Venta" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="FrijolitoModel.FK_Producto_Categoria" ManuallyRouted="false" />
         <AssociationConnector Association="FrijolitoModel.FK_Venta_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="FrijolitoModel.FK_DetalleVenta_Producto" ManuallyRouted="false" />

@@ -395,3 +395,7 @@ C:\Users\lucas\source\repos\proyecto\ProgramacionAvanzadaG8\bin\Microsoft.Config
 C:\Users\lucas\source\repos\proyecto\ProgramacionAvanzadaG8\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
 C:\Users\lucas\source\repos\proyecto\ProgramacionAvanzadaG8\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 C:\Users\lucas\source\repos\proyecto\ProgramacionAvanzadaG8\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\xampp\htdocs\ProgramacionAvanzada\ProgramacionAvanzadaG8\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml

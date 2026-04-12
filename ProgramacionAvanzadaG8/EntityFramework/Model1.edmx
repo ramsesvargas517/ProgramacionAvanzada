@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="FrijolitoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="FrijolitoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="categoria_id" />
@@ -70,6 +70,13 @@
           <Property Name="categoria_id" Type="int" Nullable="false" />
           <Property Name="imagen" Type="varchar" MaxLength="300" />
           <Property Name="genero" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="rol_id" />
+          </Key>
+          <Property Name="rol_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -181,9 +188,47 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="ActualizarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoriaId" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+          <Parameter Name="Imagen" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="ActualizarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductoId" Type="int" Mode="In" />
+          <Parameter Name="Sku" Type="varchar" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+          <Parameter Name="Precio" Type="decimal" Mode="In" />
+          <Parameter Name="Stock" Type="int" Mode="In" />
+          <Parameter Name="CategoriaId" Type="int" Mode="In" />
+          <Parameter Name="Imagen" Type="varchar" Mode="In" />
+          <Parameter Name="Genero" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="EliminarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoriaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="EliminarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductoId" Type="int" Mode="In" />
+        </Function>
         <Function Name="IniciarSesion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Username" Type="varchar" Mode="In" />
           <Parameter Name="PasswordHash" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="InsertarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+          <Parameter Name="Imagen" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="InsertarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Sku" Type="varchar" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+          <Parameter Name="Precio" Type="decimal" Mode="In" />
+          <Parameter Name="Stock" Type="int" Mode="In" />
+          <Parameter Name="CategoriaId" Type="int" Mode="In" />
+          <Parameter Name="Imagen" Type="varchar" Mode="In" />
+          <Parameter Name="Genero" Type="varchar" Mode="In" />
         </Function>
         <Function Name="ObtenerCategorias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="ObtenerProductoPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -193,6 +238,7 @@
           <Parameter Name="CategoriaId" Type="int" Mode="In" />
           <Parameter Name="Genero" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="ObtenerUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="RegistrarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Username" Type="varchar" Mode="In" />
           <Parameter Name="PasswordHash" Type="varchar" Mode="In" />
@@ -207,6 +253,7 @@
           <EntitySet Name="Metodo_Pago" EntityType="Self.Metodo_Pago" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pago" EntityType="Self.Pago" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_DetalleVenta_Producto" Association="Self.FK_DetalleVenta_Producto">
@@ -238,7 +285,8 @@
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FrijolitoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -249,8 +297,8 @@
           <Property Name="categoria_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Producto" Relationship="Self.FK_Producto_Categoria" FromRole="Categoria" ToRole="Producto" />
           <Property Name="imagen" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Producto" Relationship="Self.FK_Producto_Categoria" FromRole="Categoria" ToRole="Producto" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -312,10 +360,17 @@
           <Property Name="precio" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="stock" Type="Int32" Nullable="false" />
           <Property Name="categoria_id" Type="Int32" Nullable="false" />
+          <Property Name="imagen" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="genero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Categoria" Relationship="Self.FK_Producto_Categoria" FromRole="Producto" ToRole="Categoria" />
           <NavigationProperty Name="Detalle_Venta" Relationship="Self.FK_DetalleVenta_Producto" FromRole="Producto" ToRole="Detalle_Venta" />
-          <Property Name="imagen" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="genero" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="rol_id" />
+          </Key>
+          <Property Name="rol_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -327,8 +382,8 @@
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Venta" Relationship="Self.FK_Venta_Usuario" FromRole="Usuario" ToRole="Venta" />
           <Property Name="rol_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Venta" Relationship="Self.FK_Venta_Usuario" FromRole="Usuario" ToRole="Venta" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
@@ -439,6 +494,7 @@
           <EntitySet Name="Metodo_Pago" EntityType="Self.Metodo_Pago" />
           <EntitySet Name="Pago" EntityType="Self.Pago" />
           <EntitySet Name="Producto" EntityType="Self.Producto" />
+          <EntitySet Name="Rol" EntityType="Self.Rol" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="Venta" EntityType="Self.Venta" />
           <AssociationSet Name="FK_Producto_Categoria" Association="Self.FK_Producto_Categoria">
@@ -469,18 +525,57 @@
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
+          <FunctionImport Name="ActualizarCategoria" ReturnType="Collection(Int32)">
+            <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="Imagen" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="ActualizarProducto" ReturnType="Collection(Int32)">
+            <Parameter Name="ProductoId" Mode="In" Type="Int32" />
+            <Parameter Name="Sku" Mode="In" Type="String" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="Precio" Mode="In" Type="Decimal" />
+            <Parameter Name="Stock" Mode="In" Type="Int32" />
+            <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
+            <Parameter Name="Imagen" Mode="In" Type="String" />
+            <Parameter Name="Genero" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="EliminarCategoria" ReturnType="Collection(FrijolitoModel.EliminarCategoria_Result)">
+            <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="EliminarProducto" ReturnType="Collection(Int32)">
+            <Parameter Name="ProductoId" Mode="In" Type="Int32" />
+          </FunctionImport>
           <FunctionImport Name="IniciarSesion" ReturnType="Collection(FrijolitoModel.IniciarSesion_Result)">
             <Parameter Name="Username" Mode="In" Type="String" />
             <Parameter Name="PasswordHash" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="InsertarCategoria" ReturnType="Collection(Decimal)">
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="Imagen" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarProducto" ReturnType="Collection(Int32)">
+            <Parameter Name="Sku" Mode="In" Type="String" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Descripcion" Mode="In" Type="String" />
+            <Parameter Name="Precio" Mode="In" Type="Decimal" />
+            <Parameter Name="Stock" Mode="In" Type="Int32" />
+            <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
+            <Parameter Name="Imagen" Mode="In" Type="String" />
+            <Parameter Name="Genero" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="ObtenerCategorias" ReturnType="Collection(FrijolitoModel.ObtenerCategorias_Result)" />
           <FunctionImport Name="ObtenerProductoPorId" ReturnType="Collection(FrijolitoModel.ObtenerProductoPorId_Result)">
-          <Parameter Name="ProductoId" Mode="In" Type="Int32" />
+            <Parameter Name="ProductoId" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="ObtenerProductos" ReturnType="Collection(FrijolitoModel.ObtenerProductos_Result)" >
+          <FunctionImport Name="ObtenerProductos" ReturnType="Collection(FrijolitoModel.ObtenerProductos_Result)">
             <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
             <Parameter Name="Genero" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="ObtenerUsuarios" ReturnType="Collection(FrijolitoModel.ObtenerUsuarios_Result)" />
           <FunctionImport Name="RegistrarUsuario" ReturnType="Collection(Int32)">
             <Parameter Name="Username" Mode="In" Type="String" />
             <Parameter Name="PasswordHash" Mode="In" Type="String" />
@@ -489,17 +584,23 @@
             <Parameter Name="Email" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="EliminarCategoria_Result">
+          <Property Type="Int32" Name="FilasAfectadas" Nullable="false" />
+          <Property Type="String" Name="Mensaje" Nullable="false" MaxLength="25" />
+        </ComplexType>
         <ComplexType Name="IniciarSesion_Result">
           <Property Type="Int32" Name="usuario_id" Nullable="false" />
           <Property Type="String" Name="username" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="apellido" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="email" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="rol" Nullable="false" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="ObtenerCategorias_Result">
           <Property Type="Int32" Name="categoria_id" Nullable="false" />
           <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="descripcion" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="imagen" Nullable="true" MaxLength="300" />
         </ComplexType>
         <ComplexType Name="ObtenerProductoPorId_Result">
           <Property Type="Int32" Name="producto_id" Nullable="false" />
@@ -509,6 +610,8 @@
           <Property Type="Decimal" Name="precio" Nullable="false" Precision="10" Scale="2" />
           <Property Type="Int32" Name="stock" Nullable="false" />
           <Property Type="Int32" Name="categoria_id" Nullable="false" />
+          <Property Type="String" Name="imagen" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="genero" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="categoria_nombre" Nullable="false" MaxLength="100" />
         </ComplexType>
         <ComplexType Name="ObtenerProductos_Result">
@@ -519,7 +622,17 @@
           <Property Type="Decimal" Name="precio" Nullable="false" Precision="10" Scale="2" />
           <Property Type="Int32" Name="stock" Nullable="false" />
           <Property Type="Int32" Name="categoria_id" Nullable="false" />
+          <Property Type="String" Name="imagen" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="genero" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="categoria_nombre" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="ObtenerUsuarios_Result">
+          <Property Type="Int32" Name="usuario_id" Nullable="false" />
+          <Property Type="String" Name="username" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="apellido" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="email" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="rol" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -530,10 +643,10 @@
           <EntitySetMapping Name="Categoria">
             <EntityTypeMapping TypeName="FrijolitoModel.Categoria">
               <MappingFragment StoreEntitySet="Categoria">
-                <ScalarProperty Name="imagen" ColumnName="imagen" />
                 <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -587,8 +700,6 @@
           <EntitySetMapping Name="Producto">
             <EntityTypeMapping TypeName="FrijolitoModel.Producto">
               <MappingFragment StoreEntitySet="Producto">
-                <ScalarProperty Name="genero" ColumnName="genero" />
-                <ScalarProperty Name="imagen" ColumnName="imagen" />
                 <ScalarProperty Name="producto_id" ColumnName="producto_id" />
                 <ScalarProperty Name="sku" ColumnName="sku" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -596,19 +707,29 @@
                 <ScalarProperty Name="precio" ColumnName="precio" />
                 <ScalarProperty Name="stock" ColumnName="stock" />
                 <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rol">
+            <EntityTypeMapping TypeName="FrijolitoModel.Rol">
+              <MappingFragment StoreEntitySet="Rol">
+                <ScalarProperty Name="rol_id" ColumnName="rol_id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
             <EntityTypeMapping TypeName="FrijolitoModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
-                <ScalarProperty Name="rol_id" ColumnName="rol_id" />
                 <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password_hash" ColumnName="password_hash" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="apellido" ColumnName="apellido" />
                 <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="rol_id" ColumnName="rol_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -627,6 +748,17 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ActualizarCategoria" FunctionName="FrijolitoModel.Store.ActualizarCategoria" />
+          <FunctionImportMapping FunctionImportName="ActualizarProducto" FunctionName="FrijolitoModel.Store.ActualizarProducto" />
+          <FunctionImportMapping FunctionImportName="EliminarCategoria" FunctionName="FrijolitoModel.Store.EliminarCategoria">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FrijolitoModel.EliminarCategoria_Result">
+                <ScalarProperty Name="FilasAfectadas" ColumnName="FilasAfectadas" />
+                <ScalarProperty Name="Mensaje" ColumnName="Mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="EliminarProducto" FunctionName="FrijolitoModel.Store.EliminarProducto" />
           <FunctionImportMapping FunctionImportName="IniciarSesion" FunctionName="FrijolitoModel.Store.IniciarSesion">
             <ResultMapping>
               <ComplexTypeMapping TypeName="FrijolitoModel.IniciarSesion_Result">
@@ -635,15 +767,19 @@
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="apellido" ColumnName="apellido" />
                 <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="rol" ColumnName="rol" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="InsertarCategoria" FunctionName="FrijolitoModel.Store.InsertarCategoria" />
+          <FunctionImportMapping FunctionImportName="InsertarProducto" FunctionName="FrijolitoModel.Store.InsertarProducto" />
           <FunctionImportMapping FunctionImportName="ObtenerCategorias" FunctionName="FrijolitoModel.Store.ObtenerCategorias">
             <ResultMapping>
               <ComplexTypeMapping TypeName="FrijolitoModel.ObtenerCategorias_Result">
                 <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -657,6 +793,8 @@
                 <ScalarProperty Name="precio" ColumnName="precio" />
                 <ScalarProperty Name="stock" ColumnName="stock" />
                 <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
                 <ScalarProperty Name="categoria_nombre" ColumnName="categoria_nombre" />
               </ComplexTypeMapping>
             </ResultMapping>
@@ -671,7 +809,21 @@
                 <ScalarProperty Name="precio" ColumnName="precio" />
                 <ScalarProperty Name="stock" ColumnName="stock" />
                 <ScalarProperty Name="categoria_id" ColumnName="categoria_id" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
                 <ScalarProperty Name="categoria_nombre" ColumnName="categoria_nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ObtenerUsuarios" FunctionName="FrijolitoModel.Store.ObtenerUsuarios">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FrijolitoModel.ObtenerUsuarios_Result">
+                <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="rol" ColumnName="rol" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

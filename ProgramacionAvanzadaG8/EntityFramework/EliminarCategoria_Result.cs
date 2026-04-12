@@ -11,17 +11,9 @@ namespace ProgramacionAvanzadaG8.EntityFramework
 {
     using System;
     
-    public partial class ObtenerProductoPorId_Result
+    public partial class EliminarCategoria_Result
     {
-        public int producto_id { get; set; }
-        public string sku { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
-        public decimal precio { get; set; }
-        public int stock { get; set; }
-        public int categoria_id { get; set; }
-        public string imagen { get; set; }
-        public string genero { get; set; }
-        public string categoria_nombre { get; set; }
+        public int FilasAfectadas { get; set; }
+        public string Mensaje { get; set; }
     }
 }

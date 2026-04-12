@@ -3,140 +3,98 @@
     ViewBag.Title = "Inicio";
     var productos = ViewBag.Productos as List<ProductoModel> ?? new List<ProductoModel>();
 }
+<meta charset="utf-8" />
 
+<!-- MODAL -->
 <div class="modal fade" id="modaltoggle" aria-hidden="true" tabindex="-1">
     <div class="modal-dialog modal-fullscreen-md-down modal-md modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
+
+                <!-- IMAGEN -->
                 <div class="col-lg-12 col-md-12 me-3">
-                    <div class="image-holder">
-                        <img id="modalImg" src="" alt="Producto" />
-                    </div>
+                    <img id="modalImg" src="" alt="Producto"
+                         style="width:100%; max-height:400px; object-fit:contain;" />
                 </div>
+
+                <!-- INFO -->
                 <div class="col-lg-12 col-md-12">
                     <div class="summary">
                         <div class="summary-content fs-6">
+
                             <div class="product-header d-flex justify-content-between mt-4">
-                                <h3 class="display-7" id="modalNombre"></h3>
-                                <div class="modal-close-btn">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                                </div>
+                                <h3 id="modalNombre"></h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
+
                             <span class="product-price fs-3" id="modalPrecio"></span>
-                            <div class="product-details">
-                                <p class="fs-7" id="modalDesc"></p>
-                            </div>
-                            <ul class="select">
+
+                            <p id="modalDesc"></p>
+
+                            <ul>
                                 <li><strong>SKU:</strong> <span id="modalSku"></span></li>
-                                <li><strong>Categor&#237;a:</strong> <span id="modalCat"></span></li>
+                                <li><strong>Categoría:</strong> <span id="modalCat"></span></li>
                             </ul>
-                            <div class="variations-form shopify-cart">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="quantity d-flex pb-4">
-                                            <div class="qty-number align-top qty-number-plus d-flex justify-content-center align-items-center text-center">
-                                                <span class="increase-qty plus"><svg class="plus"><use xlink:href="#plus"></use></svg></span>
-                                            </div>
-                                            <input type="number" class="input-text text-center" step="1" min="1" value="1" title="Cantidad">
-                                            <div class="qty-number qty-number-minus d-flex justify-content-center align-items-center text-center">
-                                                <span class="increase-qty minus"><svg class="minus"><use xlink:href="#minus"></use></svg></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button type="button" class="btn btn-medium btn-black hvr-sweep-to-right">Agregar al carrito</button>
-                                    </div>
+
+                            <!-- CANTIDAD + FORM -->
+                            <div class="row mt-3">
+
+                                <!-- CANTIDAD VISUAL -->
+                                <div class="col-md-6">
+                                    <input type="number" id="cantidadVisual"
+                                           class="form-control text-center"
+                                           min="1" value="1" />
                                 </div>
+
+                                <!-- FORM REAL -->
+                                <div class="col-md-6">
+                                    @using (Html.BeginForm("Agregar", "Carrito", FormMethod.Post))
+                                    {
+                                        <input type="hidden" id="modalProductoId" name="productoId" />
+                                        <input type="hidden" id="modalCantidadHidden" name="cantidad" value="1" />
+
+                                        <button type="submit" class="btn btn-dark w-100">
+                                            Agregar al carrito
+                                        </button>
+                                    }
+                                </div>
+
                             </div>
+
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
 
-<section id="intro" class="position-relative mt-4">
-    <div class="container-lg">
-        <div class="swiper main-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="card d-flex flex-row align-items-end border-0 large jarallax-keep-img">
-                        <img src="~/Template/Images/card-image1.jpg" class="img-fluid" alt="Bienvenidos a Frijolito">
-                        <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
-                            <h2 class="card-title display-3 light">Juguetes para Todos</h2>
-                            <a href="@Url.Action("Tienda","Home")" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Tienda</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="row g-4">
-                        <div class="col-lg-12 mb-4">
-                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
-                                <img src="~/Template/Images/card-image2.jpg" class="img-fluid" alt="Juguetes Educativos">
-                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
-                                    <h2 class="card-title style-2 display-4 light">Juguetes Educativos</h2>
-                                    <a href="@Url.Action("Tienda","Home")" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
-                                <img src="~/Template/Images/card-image3.jpg" class="img-fluid" alt="Juegos de Mesa">
-                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
-                                    <h2 class="card-title style-2 display-4 light">Juegos de Mesa</h2>
-                                    <a href="@Url.Action("Tienda","Home")" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="row g-4">
-                        <div class="col-lg-12 mb-4">
-                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
-                                <img src="~/Template/Images/JugueteNi&#241;a.webp" class="img-fluid" alt="Para Ninos">
-                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
-                                    <h2 class="card-title style-2 display-4 light">Para Ni&#241;os</h2>
-                                    <a href="@Url.Action("Ninos","Home")" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="card d-flex flex-row align-items-end border-0 jarallax-keep-img">
-                                <img src="~/Template/Images/card-image2.jpg" class="img-fluid" alt="Para Ninas">
-                                <div class="cart-concern p-3 m-3 p-lg-5 m-lg-5">
-                                    <h2 class="card-title style-2 display-4 light">Para Ni&#241;as</h2>
-                                    <a href="@Url.Action("Ninas","Home")" class="text-uppercase light mt-3 d-inline-block text-hover fw-bold light-border">Ver Ahora</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
 
+<!-- PRODUCTOS -->
 @if (productos.Any())
 {
     <section class="py-5">
         <div class="container-lg">
-            <h2 class="mb-4">Productos Destacados</h2>
+            <h2 class="mb-4">Productos</h2>
+
             <div class="row g-4">
                 @foreach (var p in productos)
                 {
                     <div class="col-6 col-md-4 col-lg-3">
                         <div class="card border-0 h-100 product-card"
                              style="cursor:pointer;"
+                             data-id="@p.ProductoId"
                              data-nombre="@p.Nombre"
                              data-precio="@p.Precio.ToString("N0")"
                              data-desc="@(p.Descripcion ?? "")"
                              data-sku="@p.Sku"
                              data-cat="@p.CategoriaNombre"
                              data-img="@(string.IsNullOrEmpty(p.Imagen) ? "" : p.Imagen)"
-                             data-bs-toggle="modal" data-bs-target="#modaltoggle">
+                             data-bs-toggle="modal"
+                             data-bs-target="#modaltoggle">
+
+                            <!-- IMAGEN -->
                             <div style="height:220px;background:#f8f8f8;overflow:hidden;border-radius:8px;">
                                 @if (!string.IsNullOrEmpty(p.Imagen))
                                 {
@@ -145,37 +103,62 @@
                                 }
                                 else
                                 {
-                                    <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:48px;">&#128247;</div>
+                                    <div style="display:flex;align-items:center;justify-content:center;height:100%;">
+                                        📷
+                                    </div>
                                 }
                             </div>
+
+                            <!-- INFO -->
                             <div class="card-body px-0 pb-0">
                                 <small class="text-muted">@p.CategoriaNombre</small>
-                                <h6 class="mb-1" style="font-size:14px;font-weight:600;">@p.Nombre</h6>
-                                <strong>&#8353;@p.Precio.ToString("N0")</strong>
+                                <h6>@p.Nombre</h6>
+                                <strong>₡@p.Precio.ToString("N0")</strong>
                             </div>
+
                         </div>
                     </div>
                 }
-            </div>
-            <div class="text-center mt-4">
-                <a href="@Url.Action("Tienda","Home")" class="btn btn-outline-dark">Ver todos los productos</a>
             </div>
         </div>
     </section>
 }
 
+
 @section Scripts {
-    <script>document.querySelectorAll('.product-card[data-nombre]').forEach(function(card) {
-        card.addEventListener('click', function() {
-            var img = this.dataset.img;
-            var el  = document.getElementById('modalImg');
-            el.src  = img || '';
-            el.style.display = img ? 'block' : 'none';
-            document.getElementById('modalNombre').textContent = this.dataset.nombre || '';
-            document.getElementById('modalPrecio').textContent = '\u20a1' + (this.dataset.precio || '');
-            document.getElementById('modalDesc').textContent   = this.dataset.desc   || '';
-            document.getElementById('modalSku').textContent    = this.dataset.sku    || '';
-            document.getElementById('modalCat').textContent    = this.dataset.cat    || '';
+    <script>
+        // CLICK EN PRODUCTO
+        document.querySelectorAll('.product-card').forEach(function (card) {
+
+            card.addEventListener('click', function () {
+
+                // IMAGEN
+                var img = this.dataset.img;
+                var el = document.getElementById('modalImg');
+                el.src = img || '';
+                el.style.display = img ? 'block' : 'none';
+
+                // TEXTO
+                document.getElementById('modalNombre').textContent = this.dataset.nombre;
+                document.getElementById('modalPrecio').textContent = '₡' + this.dataset.precio;
+                document.getElementById('modalDesc').textContent = this.dataset.desc;
+                document.getElementById('modalSku').textContent = this.dataset.sku;
+                document.getElementById('modalCat').textContent = this.dataset.cat;
+
+                // 🔥 PRODUCTO ID
+                document.getElementById('modalProductoId').value = this.dataset.id;
+
+                // RESET CANTIDAD
+                document.getElementById('cantidadVisual').value = 1;
+                document.getElementById('modalCantidadHidden').value = 1;
+            });
+
         });
-    });</script>
+
+
+        // SINCRONIZAR CANTIDAD
+        document.getElementById('cantidadVisual').addEventListener('input', function () {
+            document.getElementById('modalCantidadHidden').value = this.value;
+        });
+    </script>
 }
