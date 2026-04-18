@@ -21,6 +21,15 @@
                             @ViewBag.Mensaje
                         </div>
                     }
+                    @* Mostrar mensajes de TempData (registro/recuperacion) *@
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success" role="alert">@TempData["Success"]</div>
+                    }
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger" role="alert">@TempData["Error"]</div>
+                    }
 
                     @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { id = "login-form" }))
                     {
@@ -54,7 +63,9 @@
                                     </label>
                                 </p>
                                 <p class="lost-password">
-                                    <a href="@Url.Action("RecuperarContrasenna", "Account")">¿Olvidó su contraseña?</a>
+                                    <a href="@Url.Action("RecuperarContrasenna","Account")">
+                                        ¿Olvidaste tu contraseña?
+                                    </a>
                                 </p>
                             </div>
 

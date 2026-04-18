@@ -48,5 +48,8 @@ namespace ProgramacionAvanzadaG8.Models
         [Required(ErrorMessage = "Debe seleccionar a quién va dirigido.")]
         [Display(Name = "Dirigido a")]
         public string Genero { get; set; }
+
+        [Display(Name = "Activo")]
+        public bool Activo { get; set; } = true;
     }
 }

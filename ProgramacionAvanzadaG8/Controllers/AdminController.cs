@@ -26,23 +26,25 @@ namespace ProgramacionAvanzadaG8.Controllers
         private FrijolitoEntities1 Db() => new FrijolitoEntities1();
 
         // ----------------------------------------------------------------
-        // Guardar imagen — patron del profe
-        // Guarda en /Uploads/{subcarpeta}/ con nombre unico
-        // Retorna ruta "/Uploads/{subcarpeta}/archivo.ext"
+        // GuardarImagen — patrón del profe
         // ----------------------------------------------------------------
         private string GuardarImagen(HttpPostedFileBase file, string subcarpeta)
         {
             if (file == null || file.ContentLength == 0) return null;
 
             string extension = Path.GetExtension(file.FileName).ToLowerInvariant();
-            var permitidas = new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp" };
+            var permitidas = new[] { ".jpg", ".jpeg", ".png" };
 
             if (!permitidas.Contains(extension))
-                throw new InvalidOperationException("Formato no permitido. Use JPG, PNG, GIF o WebP.");
+                throw new InvalidOperationException("Formato no permitido. Solo JPG y PNG.");
 
-            if (file.ContentLength > 3 * 1024 * 1024)
-                throw new InvalidOperationException("La imagen no puede superar 3 MB.");
+            // Tamaño máximo 2 MB (coherente con la validación en el endpoint AJAX)
+            if (file.ContentLength > 2 * 1024 * 1024)
+                throw new InvalidOperationException("La imagen no puede superar 2 MB.");
 
+            // Validar magic bytes para mayor seguridad
+            if (!EsImagenValida(file))
+                throw new InvalidOperationException("El archivo no es una imagen válida.");
 
             string fileName = Guid.NewGuid().ToString("N") + extension;
             string folder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Uploads", subcarpeta);
@@ -60,9 +62,8 @@ namespace ProgramacionAvanzadaG8.Controllers
             if (string.IsNullOrWhiteSpace(rutaRelativa)) return;
             try
             {
-
                 string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                                           rutaRelativa.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
+                    rutaRelativa.TrimStart('/').Replace('/', Path.DirectorySeparatorChar));
                 if (System.IO.File.Exists(path))
                     System.IO.File.Delete(path);
             }
@@ -110,7 +111,6 @@ namespace ProgramacionAvanzadaG8.Controllers
         public ActionResult Productos(int? categoriaId, string genero)
         {
             ViewBag.Title = "Gestion de Productos";
-
             List<ProductoModel> lista;
             using (var db = Db())
             {
@@ -136,7 +136,6 @@ namespace ProgramacionAvanzadaG8.Controllers
 
                 CargarFiltros(categoriaId, genero);
             }
-
             return View("~/Views/Admin/Productos.cshtml", lista);
         }
 
@@ -169,7 +168,6 @@ namespace ProgramacionAvanzadaG8.Controllers
             string rutaImagen = null;
             try
             {
-                // Guardar imagen con el patron del profe
                 if (ImagenFile != null && ImagenFile.ContentLength > 0)
                     rutaImagen = GuardarImagen(ImagenFile, "productos");
 
@@ -187,7 +185,7 @@ namespace ProgramacionAvanzadaG8.Controllers
                         new SqlParameter("@Genero", model.Genero ?? "Unisex")
                     ).FirstOrDefault();
 
-                    if (resultado == -1m)  
+                    if (resultado == -1m)
                     {
                         ModelState.AddModelError("Sku", "Ya existe un producto con ese SKU.");
                         if (rutaImagen != null) BorrarImagen(rutaImagen);
@@ -207,7 +205,7 @@ namespace ProgramacionAvanzadaG8.Controllers
                 CargarGeneros(model.Genero);
                 return View("~/Views/Admin/CrearProducto.cshtml", model);
             }
-            catch (Exception)
+            catch
             {
                 TempData["Error"] = "Ocurrio un error al guardar el producto.";
                 CargarCategorias(model.CategoriaId);
@@ -273,10 +271,8 @@ namespace ProgramacionAvanzadaG8.Controllers
                 string rutaImagenNueva = null;
                 if (ImagenFile != null && ImagenFile.ContentLength > 0)
                 {
-                    // Borrar imagen anterior
                     if (!string.IsNullOrEmpty(model.Imagen))
                         BorrarImagen(model.Imagen);
-
                     rutaImagenNueva = GuardarImagen(ImagenFile, "productos");
                 }
 
@@ -306,7 +302,7 @@ namespace ProgramacionAvanzadaG8.Controllers
                 CargarGeneros(model.Genero);
                 return View("~/Views/Admin/EditarProducto.cshtml", model);
             }
-            catch (Exception)
+            catch
             {
                 TempData["Error"] = "Ocurrio un error al actualizar.";
                 CargarCategorias(model.CategoriaId);
@@ -338,6 +334,75 @@ namespace ProgramacionAvanzadaG8.Controllers
             catch { TempData["Error"] = "No se pudo eliminar el producto."; }
 
             return RedirectToAction("Productos");
+        }
+
+        // ================================================================
+        // SUBIR IMAGEN — AJAX endpoint
+        // POST /Admin/SubirImagen
+        // Retorna JSON: { ok: true, ruta: "..." } o { ok: false, mensaje: "..." }
+        // ================================================================
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SubirImagen(HttpPostedFileBase imagen)
+        {
+            if (imagen == null || imagen.ContentLength == 0)
+                return Json(new { ok = false, mensaje = "No se recibi\u00f3 ning\u00fan archivo." });
+
+            // Validar tipo MIME
+            var tiposPermitidos = new[] { "image/jpeg", "image/jpg", "image/png" };
+            if (!tiposPermitidos.Contains(imagen.ContentType.ToLower()))
+                return Json(new { ok = false, mensaje = "Solo se permiten archivos JPG y PNG." });
+
+            // Validar extensi\u00f3n
+            var extensionesPermitidas = new[] { ".jpg", ".jpeg", ".png" };
+            var ext = Path.GetExtension(imagen.FileName).ToLower();
+            if (!extensionesPermitidas.Contains(ext))
+                return Json(new { ok = false, mensaje = "Extensi\u00f3n no permitida. Use .jpg o .png" });
+
+            // Validar tama\u00f1o m\u00e1ximo 2 MB
+            const int maxBytes = 2 * 1024 * 1024;
+            if (imagen.ContentLength > maxBytes)
+                return Json(new { ok = false, mensaje = "El archivo supera el m\u00e1ximo de 2 MB." });
+
+            // Validar magic bytes (cabecera real del archivo)
+            if (!EsImagenValida(imagen))
+                return Json(new { ok = false, mensaje = "El archivo no es una imagen v\u00e1lida." });
+
+            try
+            {
+                // Reusar GuardarImagen que ya existe en este controller
+                string ruta = GuardarImagen(imagen, "productos");
+                return Json(new { ok = true, ruta = ruta });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Json(new { ok = false, mensaje = ex.Message });
+            }
+            catch
+            {
+                return Json(new { ok = false, mensaje = "Error al guardar. Int\u00e9ntalo de nuevo." });
+            }
+        }
+
+        // Helper: verificar magic bytes de JPG y PNG
+        private bool EsImagenValida(HttpPostedFileBase archivo)
+        {
+            var buffer = new byte[8];
+            archivo.InputStream.Position = 0;
+            int leidos = archivo.InputStream.Read(buffer, 0, buffer.Length);
+            archivo.InputStream.Position = 0;
+
+            if (leidos < 4) return false;
+
+            bool esJpg = buffer[0] == 0xFF && buffer[1] == 0xD8 && buffer[2] == 0xFF;
+            bool esPng = leidos >= 8 &&
+                         buffer[0] == 0x89 && buffer[1] == 0x50 &&
+                         buffer[2] == 0x4E && buffer[3] == 0x47 &&
+                         buffer[4] == 0x0D && buffer[5] == 0x0A &&
+                         buffer[6] == 0x1A && buffer[7] == 0x0A;
+
+            return esJpg || esPng;
         }
 
         // ================================================================
@@ -403,7 +468,11 @@ namespace ProgramacionAvanzadaG8.Controllers
             using (var db = Db())
             {
                 var cat = db.Categoria.Find(id);
-                if (cat == null) { TempData["Error"] = "Categoria no encontrada."; return RedirectToAction("Categorias"); }
+                if (cat == null)
+                {
+                    TempData["Error"] = "Categoria no encontrada.";
+                    return RedirectToAction("Categorias");
+                }
                 var model = new CategoriaModel
                 {
                     CategoriaId = cat.categoria_id,
@@ -485,7 +554,7 @@ namespace ProgramacionAvanzadaG8.Controllers
         }
 
         // ================================================================
-        // HELPERS
+        // HELPERS PRIVADOS
         // ================================================================
 
         private void CargarCategorias(int? sel = null)
@@ -493,8 +562,11 @@ namespace ProgramacionAvanzadaG8.Controllers
             using (var db = Db())
             {
                 var cats = db.ObtenerCategorias()
-                    .Select(c => new CategoriaModel { CategoriaId = c.categoria_id, Nombre = c.nombre })
-                    .ToList();
+                    .Select(c => new CategoriaModel
+                    {
+                        CategoriaId = c.categoria_id,
+                        Nombre = c.nombre
+                    }).ToList();
                 ViewBag.Categorias = new SelectList(cats, "CategoriaId", "Nombre", sel);
             }
         }
@@ -514,17 +586,20 @@ namespace ProgramacionAvanzadaG8.Controllers
             using (var db = Db())
             {
                 var cats = db.ObtenerCategorias()
-                    .Select(c => new CategoriaModel { CategoriaId = c.categoria_id, Nombre = c.nombre })
-                    .ToList();
+                    .Select(c => new CategoriaModel
+                    {
+                        CategoriaId = c.categoria_id,
+                        Nombre = c.nombre
+                    }).ToList();
                 ViewBag.Categorias = new SelectList(cats, "CategoriaId", "Nombre", catSel);
             }
 
             var gensFilter = new List<SelectListItem>
             {
-                new SelectListItem { Value = "",       Text = "Todos"    },
-                new SelectListItem { Value = "Nino",   Text = "Ninos"    },
-                new SelectListItem { Value = "Nina",   Text = "Ninas"    },
-                new SelectListItem { Value = "Unisex", Text = "Unisex"   },
+                new SelectListItem { Value = "",       Text = "Todos"  },
+                new SelectListItem { Value = "Nino",   Text = "Ninos"  },
+                new SelectListItem { Value = "Nina",   Text = "Ninas"  },
+                new SelectListItem { Value = "Unisex", Text = "Unisex" },
             };
             ViewBag.GenerosFilter = new SelectList(gensFilter, "Value", "Text", genSel ?? "");
             ViewBag.GeneroFiltro = genSel;
@@ -536,8 +611,8 @@ namespace ProgramacionAvanzadaG8.Controllers
             try
             {
                 return db.Database.SqlQuery<string>(
-                "SELECT imagen FROM Producto WHERE producto_id=@id",
-                new SqlParameter("@id", id)).FirstOrDefault();
+                    "SELECT imagen FROM Producto WHERE producto_id=@id",
+                    new SqlParameter("@id", id)).FirstOrDefault();
             }
             catch { return null; }
         }
@@ -547,12 +622,17 @@ namespace ProgramacionAvanzadaG8.Controllers
             try
             {
                 return db.Database.SqlQuery<string>(
-                "SELECT imagen FROM Categoria WHERE categoria_id=@id",
-                new SqlParameter("@id", id)).FirstOrDefault();
+                    "SELECT imagen FROM Categoria WHERE categoria_id=@id",
+                    new SqlParameter("@id", id)).FirstOrDefault();
             }
             catch { return null; }
         }
-    }
+
+    } // ← FIN de la clase AdminController
+
+    // ====================================================================
+    // Clases auxiliares (fuera de AdminController, dentro del namespace)
+    // ====================================================================
 
     public class EliminarCategoriaResult
     {
@@ -582,4 +662,5 @@ namespace ProgramacionAvanzadaG8.Controllers
             base.OnActionExecuting(filterContext);
         }
     }
-}
+
+} 

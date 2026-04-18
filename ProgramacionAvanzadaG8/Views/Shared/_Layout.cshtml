@@ -17,133 +17,37 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="description" content="Frijolito - Tu jugueter&#237;a favorita en Costa Rica" />
     <meta name="keywords" content="jugueter&#237;a, juguetes, Costa Rica, Frijolito, ni&#241;os" />
-    <link href="~/Template/css/style.css" rel="stylesheet" />
-    <link href="~/Template/css/vendor.css" rel="stylesheet" />
-    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href='@Url.Content("~/Template/css/style.css")' rel="stylesheet" />
+    <link href='@Url.Content("~/Template/css/vendor.css")' rel="stylesheet" />
+    <link href='@Url.Content("~/Content/Site.css")' rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,900;1,900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
-    <style>
-        /* Badge contador carrito */
-        .carrito-nav-wrap {
-            position: relative;
-            display: inline-flex;
-        }
-
-        .carrito-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #e74c3c;
-            color: #fff;
-            font-size: 10px;
-            font-weight: 800;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-            pointer-events: none;
-        }
-        /* Mini-carrito modal items */
-        .mini-item-row {
-            display: flex;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            align-items: center;
-        }
-
-            .mini-item-row:last-child {
-                border-bottom: none;
-            }
-
-        .mini-item-thumb {
-            width: 56px;
-            height: 56px;
-            flex-shrink: 0;
-            background: #f5f5f5;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-            .mini-item-thumb img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                padding: 4px;
-            }
-
-        .mini-item-info {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .mini-item-nombre {
-            font-size: 13px;
-            font-weight: 600;
-            color: #222;
-            margin: 0 0 2px;
-            line-height: 1.3;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .mini-item-detalle {
-            font-size: 12px;
-            color: #999;
-        }
-
-        .mini-item-precio {
-            font-weight: 700;
-            color: #e74c3c;
-            font-size: 14px;
-            white-space: nowrap;
-        }
-
-        .mini-item-remove {
-            background: none;
-            border: none;
-            color: #ccc;
-            font-size: 18px;
-            cursor: pointer;
-            padding: 0 0 0 8px;
-            flex-shrink: 0;
-            line-height: 1;
-        }
-
-            .mini-item-remove:hover {
-                color: #e74c3c;
-            }
-
-        .mini-subtotal-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 0 0;
-            font-size: 15px;
-        }
-
-        .mini-empty {
-            text-align: center;
-            padding: 40px 0;
-            color: #aaa;
-        }
-
-        .mini-empty-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-    </style>
+    <!-- moved styles to Content/Site.css -->
 </head>
 <body>
 
+    @* #region FLASH MESSAGES *@
+    <div class="container mt-3">
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["Error"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+        @if (TempData["Info"] != null)
+        {
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                @TempData["Info"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        }
+    </div>
+    @* #endregion FLASH MESSAGES *@
+
+    @* #region SVG SPRITE *@
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="shopping-carriage" viewBox="0 0 24 24" fill="none">
             <path d="M5 22H19C20.103 22 21 21.103 21 20V9C21 8.73478 20.8946 8.48043 20.7071 8.29289C20.5196 8.10536 20.2652 8 20 8H17V7C17 4.243 14.757 2 12 2C9.243 2 7 4.243 7 7V8H4C3.73478 8 3.48043 8.10536 3.29289 8.29289C3.10536 8.48043 3 8.73478 3 9V20C3 21.103 3.897 22 5 22ZM9 7C9 5.346 10.346 4 12 4C13.654 4 15 5.346 15 7V8H9V7ZM5 10H7V12H9V10H15V12H17V10H19L19.002 20H5V10Z" fill="black" />
@@ -193,6 +97,7 @@
             <path fill="currentColor" d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z" />
         </symbol>
     </svg>
+    @* #endregion SVG SPRITE *@
 
     <div class="preloader" style="position:fixed;top:0;left:0;width:100%;height:100%;background-color:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;">
         <svg version="1.1" id="L4" width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100" enable-background="new 0 0 0 0" xml:space="preserve">
@@ -248,7 +153,7 @@
                                     <div class="mini-item-thumb">
                                         @if (!string.IsNullOrEmpty(item.Imagen))
                                         {
-                                            <img src="@item.Imagen" alt="@item.Nombre" />
+                                            <img src="@item.Imagen" alt="@item.Nombre" class="mini-item-img" />
                                         }
                                         else
                                         {
@@ -275,10 +180,9 @@
                         </div>
 
                         <div class="d-grid gap-2 mt-3">
-                            <a href="@Url.Action("Index","Carrito")"
-                               class="btn btn-dark rounded-3 fw-bold">Ver carrito completo</a>
-                            <a href="@Url.Action("Checkout","Carrito")"
-                               class="btn btn-outline-dark rounded-3 fw-bold">Proceder al pago</a>
+                            <a href="@Url.Action("Index","Carrito")" class="btn btn-dark rounded-3 fw-bold">Ver carrito completo</a>
+                            <a href="#" id="modal-proceder-pago" class="btn btn-outline-dark rounded-3 fw-bold">Proceder al pago</a>
+                            <button type="button" id="modal-seguir-comprando" class="btn btn-secondary rounded-3">Seguir comprando</button>
                         </div>
                     }
                 </div>
@@ -364,13 +268,25 @@
 
                 <div class="user-items ps-0 ps-md-4">
                     <ul class="d-flex justify-content-end list-unstyled align-items-center m-0 frijolito-user-icons">
+                        @if (Session["UsuarioId"] != null)
+                        {
+                            <li class="me-2">
+                                <span class="d-inline-block">@Session["UsuarioNombre"]</span>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Logout","Account")" class="border-0 btn btn-sm btn-outline-secondary" title="Cerrar sesión">Cerrar sesión</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a href="@Url.Action("Login", "Account")" class="border-0" title="Mi Cuenta">
+                                    <svg class="user" width="24" height="24"><use xlink:href="#user"></use></svg>
+                                </a>
+                            </li>
+                        }
                         <li>
-                            <a href="@Url.Action("Login", "Account")" class="border-0" title="Mi Cuenta">
-                                <svg class="user" width="24" height="24"><use xlink:href="#user"></use></svg>
-                            </a>
-                        </li>
-                        <li>
-                            
+
                             <a href="#" class="border-0 carrito-nav-wrap" title="Carrito"
                                data-bs-toggle="modal" data-bs-target="#modalCarrito">
                                 <svg class="shopping-cart" width="24" height="24"><use xlink:href="#shopping-cart"></use></svg>
@@ -455,9 +371,49 @@
         </div>
     </footer>
 
-    <script src="~/Template/js/jquery-1.11.0.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        // fallback: si por alguna razon jquery.validate no está registrado, cargarlo dinámicamente
+        (function(){
+            if (typeof jQuery === 'undefined') return;
+            if (typeof jQuery.fn.validate === 'undefined') {
+                var s = document.createElement('script');
+                s.src = '/Scripts/jquery.validate.min.js';
+                s.async = false;
+                document.head.appendChild(s);
+            }
+        })();
+    </script>
     <script src="~/Template/js/plugins.js"></script>
     <script src="~/Template/js/script.js"></script>
     @RenderSection("Scripts", required: false)
+    <script>
+        // Modal control: seguir comprando y validar proceder al pago
+        (function(){
+            var seguir = document.getElementById('modal-seguir-comprando');
+            if (seguir) seguir.addEventListener('click', function(){
+                if (typeof $ !== 'undefined' && $.fn.modal) $('#modalCarrito').modal('hide');
+                else {
+                    var m = document.getElementById('modalCarrito'); if (m) { m.style.display='none'; m.classList.remove('show'); }
+                }
+            });
+
+            var proceder = document.getElementById('modal-proceder-pago');
+            if (proceder) proceder.addEventListener('click', function(e){
+                e.preventDefault();
+                fetch('@Url.Action("VerificarSesion","Account")')
+                    .then(function(res){ return res.json(); })
+                    .then(function(data){
+                        if (data && data.autenticado) {
+                            window.location.href = '@Url.Action("Checkout","Carrito")';
+                        } else {
+                            if (typeof $ !== 'undefined' && $.fn.modal) $('#modalCarrito').modal('hide');
+                            window.location.href = '@Url.Action("Login","Account")?returnUrl=' + encodeURIComponent('@Url.Action("Checkout","Carrito")');
+                        }
+                    }).catch(function(){ window.location.href = '@Url.Action("Login","Account")'; });
+            });
+        })();
+    </script>
 </body>
 </html>

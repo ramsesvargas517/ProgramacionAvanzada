@@ -169,17 +169,18 @@
 </section>
 
 @section Scripts {
-    <script>document.querySelectorAll('.carrito-row').forEach(function(row) {
-    var input = row.querySelector('input[name="cantidad"]');
-    if (!input) return;
-    row.querySelector('.qty-btn-minus').addEventListener('click', function() {
-        var v = parseInt(input.value) || 1;
-        if (v > 0) input.value = v - 1;
-    });
-    row.querySelector('.qty-btn-plus').addEventListener('click', function() {
-        var v = parseInt(input.value) || 0;
-        var max = parseInt(this.dataset.max) || 9999;
-        if (v < max) input.value = v + 1;
-    });
-});</script>
+    <script>
+    document.querySelectorAll('.carrito-row').forEach(function (row) {
+            var input = row.querySelector('input[name="cantidad"]');
+            if (!input) return;
+            row.querySelector('.qty-btn-minus').addEventListener('click', function () {
+                var v = parseInt(input.value) || 1;
+                if (v > 0) input.value = v - 1;
+            });
+            row.querySelector('.qty-btn-plus').addEventListener('click', function () {
+                var v = parseInt(input.value) || 0;
+                var max = parseInt(this.dataset.max) || 9999;
+                if (v < max) input.value = v + 1;
+            });
+        });</script>
 }

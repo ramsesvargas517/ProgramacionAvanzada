@@ -112,20 +112,21 @@
 </section>
 
 @section Scripts {
-    <script>document.querySelectorAll('[data-nombre]').forEach(function(card) {
-        card.addEventListener('click', function() {
-            var img = this.dataset.img;
-            var el  = document.getElementById('modalImg');
-            if (el) {
-                el.src = img || '';
-                el.style.display = img ? 'block' : 'none';
-            }
-            var set = function(id, val) { var e = document.getElementById(id); if(e) e.textContent = val; };
-            set('modalNombre', this.dataset.nombre || '');
-            set('modalPrecio', '\u20a1' + (this.dataset.precio || ''));
-            set('modalDesc',   this.dataset.desc   || '');
-            set('modalSku',    this.dataset.sku    || '');
-            set('modalCat',    this.dataset.cat    || '');
-        });
-    });</script>
+    <script>
+    document.querySelectorAll('[data-nombre]').forEach(function (card) {
+            card.addEventListener('click', function () {
+                var img = this.dataset.img;
+                var el = document.getElementById('modalImg');
+                if (el) {
+                    el.src = img || '';
+                    el.style.display = img ? 'block' : 'none';
+                }
+                var set = function (id, val) { var e = document.getElementById(id); if (e) e.textContent = val; };
+                set('modalNombre', this.dataset.nombre || '');
+                set('modalPrecio', '\u20a1' + (this.dataset.precio || ''));
+                set('modalDesc', this.dataset.desc || '');
+                set('modalSku', this.dataset.sku || '');
+                set('modalCat', this.dataset.cat || '');
+            });
+        });</script>
 }

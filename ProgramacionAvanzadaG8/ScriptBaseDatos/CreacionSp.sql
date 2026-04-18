@@ -692,3 +692,15 @@ GO
 PRINT '====================================';
 PRINT 'Columna genero y SPs actualizados.';
 PRINT '====================================';
+
+
+-------------------------------------------
+--alter tabla de usuarios para usos de tokens
+
+use Frijolito.
+
+ALTER TABLE Usuario
+    ADD token_recuperacion NVARCHAR(200) NULL,
+        token_expiracion   DATETIME      NULL;
+GO
+

@@ -27,6 +27,8 @@ namespace ProgramacionAvanzadaG8.EntityFramework
         public string apellido { get; set; }
         public string email { get; set; }
         public int rol_id { get; set; }
+        public string token_recuperacion { get; set; }
+        public Nullable<System.DateTime> token_expiracion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Venta { get; set; }

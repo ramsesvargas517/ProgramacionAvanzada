@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FrijolitoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="FrijolitoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="categoria_id" />
@@ -89,6 +89,8 @@
           <Property Name="apellido" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="rol_id" Type="int" Nullable="false" />
+          <Property Name="token_recuperacion" Type="nvarchar" MaxLength="200" />
+          <Property Name="token_expiracion" Type="datetime" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
@@ -285,8 +287,7 @@
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="FrijolitoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -384,6 +385,8 @@
           <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="rol_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Venta" Relationship="Self.FK_Venta_Usuario" FromRole="Usuario" ToRole="Venta" />
+          <Property Name="token_recuperacion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="token_expiracion" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Venta">
           <Key>
@@ -543,10 +546,10 @@
             <Parameter Name="Genero" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="EliminarCategoria" ReturnType="Collection(FrijolitoModel.EliminarCategoria_Result)">
-            <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
+          <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EliminarProducto" ReturnType="Collection(Int32)">
-            <Parameter Name="ProductoId" Mode="In" Type="Int32" />
+          <Parameter Name="ProductoId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="IniciarSesion" ReturnType="Collection(FrijolitoModel.IniciarSesion_Result)">
             <Parameter Name="Username" Mode="In" Type="String" />
@@ -569,7 +572,7 @@
           </FunctionImport>
           <FunctionImport Name="ObtenerCategorias" ReturnType="Collection(FrijolitoModel.ObtenerCategorias_Result)" />
           <FunctionImport Name="ObtenerProductoPorId" ReturnType="Collection(FrijolitoModel.ObtenerProductoPorId_Result)">
-            <Parameter Name="ProductoId" Mode="In" Type="Int32" />
+          <Parameter Name="ProductoId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ObtenerProductos" ReturnType="Collection(FrijolitoModel.ObtenerProductos_Result)">
             <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
@@ -723,6 +726,8 @@
           <EntitySetMapping Name="Usuario">
             <EntityTypeMapping TypeName="FrijolitoModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="token_expiracion" ColumnName="token_expiracion" />
+                <ScalarProperty Name="token_recuperacion" ColumnName="token_recuperacion" />
                 <ScalarProperty Name="usuario_id" ColumnName="usuario_id" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="password_hash" ColumnName="password_hash" />

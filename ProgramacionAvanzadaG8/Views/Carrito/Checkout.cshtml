@@ -53,7 +53,7 @@
                         </div>
                         <div class="col-md-6">
                             @Html.LabelFor(m => m.Identificacion, new { @class = "form-label fw-bold" })
-                            @Html.TextBoxFor(m => m.Identificacion, new { @class = "form-control rounded-3", placeholder = "C&#233;dula o pasaporte" })
+                            @Html.TextBoxFor(m => m.Identificacion, new { @class = "form-control rounded-3", placeholder = "Cedula o pasaporte" })
                             @Html.ValidationMessageFor(m => m.Identificacion, "", new { @class = "text-danger small" })
                         </div>
                         <div class="col-md-6">
@@ -68,7 +68,7 @@
                         </div>
                         <div class="col-12">
                             @Html.LabelFor(m => m.Direccion, new { @class = "form-label fw-bold" })
-                            @Html.TextAreaFor(m => m.Direccion, new { @class = "form-control rounded-3", rows = 2, placeholder = "Direcci&#243;n de entrega..." })
+                            @Html.TextAreaFor(m => m.Direccion, new { @class = "form-control rounded-3", rows = 2, placeholder = "Direccion de entrega..." })
                             @Html.ValidationMessageFor(m => m.Direccion, "", new { @class = "text-danger small" })
                         </div>
                     </div>
@@ -79,17 +79,18 @@
                     <div class="row g-3">
                         <div class="col-12">
                             @Html.LabelFor(m => m.MetodoPagoId, new { @class = "form-label fw-bold" })
+                            @{ var metodos = ViewBag.MetodosPago as IEnumerable<System.Web.Mvc.SelectListItem> ?? new List<System.Web.Mvc.SelectListItem>(); }
                             @Html.DropDownListFor(
                                                m => m.MetodoPagoId,
-                                               ViewBag.MetodosPago as List<System.Web.Mvc.SelectListItem>,
-                                               "-- Seleccione m&#233;todo de pago --",
+                                               metodos,
+                                               "-- Seleccione metodo de pago --",
                                                new { @class = "form-select rounded-3" }
                                            )
                             @Html.ValidationMessageFor(m => m.MetodoPagoId, "", new { @class = "text-danger small" })
                         </div>
                         <div class="col-12">
                             @Html.LabelFor(m => m.ReferenciaPago, new { @class = "form-label fw-bold" })
-                            @Html.TextBoxFor(m => m.ReferenciaPago, new { @class = "form-control rounded-3", placeholder = "Ej: SINPE12345 o &#250;ltimos 4 d&#237;gitos de tarjeta" })
+                            @Html.TextBoxFor(m => m.ReferenciaPago, new { @class = "form-control rounded-3", placeholder = "Ej: SINPE12345 o ultimos 4 digitos de tarjeta" })
                             @Html.ValidationMessageFor(m => m.ReferenciaPago, "", new { @class = "text-danger small" })
                         </div>
                     </div>
