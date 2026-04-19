@@ -13,12 +13,51 @@ namespace ProgramacionAvanzadaG8.Controllers
 
         // GET: /  o  /Home/Index
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(string q)
         {
             using (var db = Db())
             {
+                // Categorias para el menu desplegable del nav (una vez)
+                var categoriasList = db.ObtenerCategorias()
+                    .Select(c => new CategoriaModel
+                    {
+                        CategoriaId = c.categoria_id,
+                        Nombre = c.nombre
+                    }).ToList();
+
+                if (!string.IsNullOrEmpty(q))
+                {
+                    // Buscar en nombre, descripcion o categoria (usar comodines en el parámetro)
+                    var qParam = new SqlParameter("@q", "%" + q + "%");
+                    var productos = db.Database.SqlQuery<ProductoModel>(
+                        @"SELECT p.producto_id  AS ProductoId,
+                                 p.sku          AS Sku,
+                                 p.nombre       AS Nombre,
+                                 p.descripcion  AS Descripcion,
+                                 p.precio       AS Precio,
+                                 p.stock        AS Stock,
+                                 p.categoria_id AS CategoriaId,
+                                 p.imagen       AS Imagen,
+                                 p.genero       AS Genero,
+                                 c.nombre       AS CategoriaNombre
+                          FROM   Producto p
+                          INNER JOIN Categoria c ON p.categoria_id = c.categoria_id
+                          WHERE  p.stock > 0
+                            AND  (p.nombre LIKE @q OR p.descripcion LIKE @q OR c.nombre LIKE @q)
+                          ORDER BY p.nombre",
+                        qParam
+                    ).ToList();
+
+                    ViewBag.Productos = productos;
+                    ViewBag.Categorias = categoriasList;
+                    ViewBag.Title = "Resultados de búsqueda";
+                    ViewBag.Query = q;
+
+                    return View("Tienda");
+                }
+
                 // Productos destacados para el home (todos, max 8)
-                var productos = db.Database.SqlQuery<ProductoModel>(
+                var destacados = db.Database.SqlQuery<ProductoModel>(
                     @"SELECT TOP 8
                              p.producto_id  AS ProductoId,
                              p.sku          AS Sku,
@@ -36,17 +75,8 @@ namespace ProgramacionAvanzadaG8.Controllers
                       ORDER BY p.producto_id DESC"
                 ).ToList();
 
-                ViewBag.Productos = productos;
-
-                // Categorias para el menu desplegable del nav
-                var categorias = db.ObtenerCategorias()
-                    .Select(c => new CategoriaModel
-                    {
-                        CategoriaId = c.categoria_id,
-                        Nombre = c.nombre
-                    }).ToList();
-
-                ViewBag.Categorias = categorias;
+                ViewBag.Productos = destacados;
+                ViewBag.Categorias = categoriasList;
             }
 
             return View();

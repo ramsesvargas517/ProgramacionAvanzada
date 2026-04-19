@@ -7,41 +7,31 @@ namespace ProgramacionAvanzadaG8.Controllers
         public ActionResult NuestroBlog()
         {
             ViewBag.Titulo = "Nuestro Blog";
-            ViewBag.Encabezado = "Nuestro Blog";
-            ViewBag.Contenido = "En esta sección podrás encontrar noticias, novedades, publicaciones y contenido relacionado con nuestra tienda y nuestros productos.";
-            return View("PaginaBase");
+            return View();
         }
 
         public ActionResult PoliticaPrivacidad()
         {
             ViewBag.Titulo = "Política de Privacidad";
-            ViewBag.Encabezado = "Política de Privacidad";
-            ViewBag.Contenido = "Aquí se describe cómo se recopila, almacena y protege la información de los usuarios dentro del sitio web.";
-            return View("PaginaBase");
+            return View();
         }
 
         public ActionResult Contactenos()
         {
             ViewBag.Titulo = "Contáctenos";
-            ViewBag.Encabezado = "Contáctenos";
-            ViewBag.Contenido = "Si deseas comunicarte con nosotros, aquí encontrarás la información necesaria para hacerlo.";
-            return View("PaginaBase");
+            return View();
         }
 
         public ActionResult Ayuda()
         {
             ViewBag.Titulo = "Ayuda";
-            ViewBag.Encabezado = "Ayuda";
-            ViewBag.Contenido = "En esta sección puedes encontrar respuestas a preguntas frecuentes, soporte y asistencia general.";
-            return View("PaginaBase");
+            return View();
         }
 
         public ActionResult Comunidad()
         {
             ViewBag.Titulo = "Comunidad";
-            ViewBag.Encabezado = "Comunidad";
-            ViewBag.Contenido = "Espacio dedicado a nuestra comunidad de clientes, usuarios y seguidores.";
-            return View("PaginaBase");
+            return View();
         }
 
         public ActionResult Historia()

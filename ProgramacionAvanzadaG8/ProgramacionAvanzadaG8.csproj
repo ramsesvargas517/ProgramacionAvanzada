@@ -209,6 +209,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -311,6 +312,11 @@
     <Content Include="Views\Carrito\Confirmacion.cshtml" />
     <Content Include="Views\Paginas\PaginaBase.cshtml" />
     <Content Include="Views\Account\RestablecerContrasenna.cshtml" />
+    <Content Include="Views\Paginas\NuestroBlog.cshtml" />
+    <Content Include="Views\Paginas\PoliticaPrivacidad.cshtml" />
+    <Content Include="Views\Paginas\Contactenos.cshtml" />
+    <Content Include="Views\Paginas\Ayuda.cshtml" />
+    <Content Include="Views\Paginas\Comunidad.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

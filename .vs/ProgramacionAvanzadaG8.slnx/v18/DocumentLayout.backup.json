@@ -3,27 +3,51 @@
   "WorkspaceRootPath": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\content\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\content\\admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\scriptbasedatos\\creacionsp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\scriptbasedatos\\creacionsp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\models\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\carrito\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\carrito\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\models\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\models\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -31,23 +55,15 @@
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\carrito\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\home\\tienda.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\home\\tienda.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\home\\tienda.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\carrito\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\carrito\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\admin\\editarproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\admin\\editarproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\admin\\editarproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\admin\\crearproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\admin\\crearproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\admin\\crearproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -55,36 +71,60 @@
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\carrito\\confirmacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\account\\restablecercontrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\account\\restablecercontrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\account\\restablecercontrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\account\\recuperarcontrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\views\\account\\recuperarcontrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\account\\recuperarcontrasenna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\entityframework\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\entityframework\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\entityframework\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\template\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\template\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\template\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\models\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|C:\\xampp\\htdocs\\ProgramacionAvanzada\\programacionavanzadag8\\models\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\models\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\scriptbasedatos\\creacionsp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\scriptbasedatos\\creacionsp.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\controllers\\paginascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\controllers\\paginascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\paginas\\nuestroblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\paginas\\nuestroblog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\paginas\\politicaprivacidad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\paginas\\politicaprivacidad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\paginas\\contactenos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\paginas\\contactenos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\paginas\\ayuda.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\paginas\\ayuda.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\views\\paginas\\comunidad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\views\\paginas\\comunidad.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|c:\\xampp\\htdocs\\programacionavanzada\\programacionavanzadag8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8082FC9E-98CF-4F35-9BE1-48DE66FEDE06}|ProgramacionAvanzadaG8\\ProgramacionAvanzadaG8.csproj|solutionrelative:programacionavanzadag8\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 198,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,33 +146,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAJ8DAAAAAAAAAAAawLQDAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T23:42:58.583Z",
+              "DocumentIndex": 30,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAEBUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:29:30.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Checkout.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
-              "ViewState": "AgIAALEAAAAAAAAAAAAAALEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 28,
+              "Title": "Ayuda.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\Ayuda.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Paginas\\Ayuda.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\Ayuda.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Paginas\\Ayuda.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T18:18:17.573Z",
+              "WhenOpened": "2026-04-19T17:22:10.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 27,
+              "Title": "Contactenos.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\Contactenos.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Paginas\\Contactenos.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\Contactenos.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Paginas\\Contactenos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-19T17:22:01.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PoliticaPrivacidad.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\PoliticaPrivacidad.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Paginas\\PoliticaPrivacidad.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\PoliticaPrivacidad.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Paginas\\PoliticaPrivacidad.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-19T17:21:51.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NuestroBlog.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\NuestroBlog.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Paginas\\NuestroBlog.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\NuestroBlog.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Paginas\\NuestroBlog.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-19T17:21:40.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PaginasController.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\PaginasController.cs",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Controllers\\PaginasController.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\PaginasController.cs",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Controllers\\PaginasController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T17:21:24.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "EditarProducto.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Admin\\EditarProducto.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Admin\\EditarProducto.cshtml",
@@ -140,12 +232,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Admin\\EditarProducto.cshtml",
               "ViewState": "AgIAAHcAAAAAAAAAAAAIwJIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T19:58:39.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T19:58:39.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Tienda.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Tienda.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Home\\Tienda.cshtml",
@@ -153,38 +244,74 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Home\\Tienda.cshtml",
               "ViewState": "AgIAAGIAAAAAAAAAAAAIwHoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T21:12:33.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T21:12:33.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAkwHoBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAmwH4AAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-12T18:16:21.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\AdminController.cs*",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Controllers\\AdminController.cs*",
-              "ViewState": "AgIAAI4CAAAAAAAAAAAAAJkCAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T19:55:18.178Z",
+              "DocumentIndex": 29,
+              "Title": "Comunidad.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\Comunidad.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Paginas\\Comunidad.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Paginas\\Comunidad.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Paginas\\Comunidad.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-19T17:22:19.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Carrito\\Checkout.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAmwFUAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-12T18:18:17.573Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Admin.css",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Content\\Admin.css",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Content\\Admin.css",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Content\\Admin.css",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Content\\Admin.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-19T17:07:41.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAI4CAAAAAAAAAAAAAJkCAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T19:55:18.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ProductoModel.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Models\\ProductoModel.cs",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Models\\ProductoModel.cs",
@@ -192,12 +319,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Models\\ProductoModel.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T20:35:36.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T20:35:36.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Controllers\\AccountController.cs",
@@ -205,12 +331,61 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Controllers\\AccountController.cs",
               "ViewState": "AgIAALYAAAAAAAAAAAAAAJ0BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T19:48:33.337Z",
+              "WhenOpened": "2026-04-17T19:48:33.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T21:53:26.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Site.css",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Content\\Site.css",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Content\\Site.css",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Content\\Site.css",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Content\\Site.css",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAqwHYBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-04-17T20:34:03.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwEAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-17T23:42:58.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreacionSp.sql ",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\ScriptBaseDatos\\CreacionSp.sql",
+              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\ScriptBaseDatos\\CreacionSp.sql",
+              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\ScriptBaseDatos\\CreacionSp.sql",
+              "RelativeToolTip": "ProgramacionAvanzadaG8\\ScriptBaseDatos\\CreacionSp.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-04-18T00:02:25.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Web.config",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Web.config",
@@ -218,12 +393,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Web.config",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-04-17T19:45:23.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T19:45:23.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "CarritoController.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Controllers\\CarritoController.cs",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Controllers\\CarritoController.cs",
@@ -231,12 +405,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Controllers\\CarritoController.cs",
               "ViewState": "AgIAACoBAAAAAAAAAAAAADoBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T20:07:11.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T20:07:11.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Carrito\\Index.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Carrito\\Index.cshtml",
@@ -244,12 +417,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Carrito\\Index.cshtml",
               "ViewState": "AgIAAJgAAAAAAAAAAAAIwLYAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T18:17:59.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T18:17:59.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "CrearProducto.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Admin\\CrearProducto.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Admin\\CrearProducto.cshtml",
@@ -257,12 +429,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Admin\\CrearProducto.cshtml",
               "ViewState": "AgIAAHUAAAAAAAAAAAAIwI8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T19:58:12.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T19:58:12.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Confirmacion.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Carrito\\Confirmacion.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Carrito\\Confirmacion.cshtml",
@@ -270,25 +441,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Carrito\\Confirmacion.cshtml",
               "ViewState": "AgIAAA4AAAAAAAAAAAAkwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T18:18:34.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T18:18:34.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAN4AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T21:53:26.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "CheckoutViewModel.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Models\\CheckoutViewModel.cs",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Models\\CheckoutViewModel.cs",
@@ -296,12 +453,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Models\\CheckoutViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwCcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-17T23:03:18.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T23:03:18.441Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "RecuperarContrasenna.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Account\\RecuperarContrasenna.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Account\\RecuperarContrasenna.cshtml",
@@ -309,12 +465,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Account\\RecuperarContrasenna.cshtml",
               "ViewState": "AgIAABQAAAAAAAAAAAASwGgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T19:50:31.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T19:50:31.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "RestablecerContrasenna.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Account\\RestablecerContrasenna.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Account\\RestablecerContrasenna.cshtml",
@@ -322,12 +477,11 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Account\\RestablecerContrasenna.cshtml",
               "ViewState": "AgIAADoAAAAAAAAAAAAiwFEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T19:51:26.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T19:51:26.209Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Views\\Account\\Login.cshtml",
@@ -335,37 +489,22 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Views\\Account\\Login.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAASwEUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-17T19:52:34.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-17T19:52:34.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Site.css",
-              "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Content\\Site.css",
-              "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Content\\Site.css",
-              "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Content\\Site.css",
-              "RelativeToolTip": "ProgramacionAvanzadaG8\\Content\\Site.css",
-              "ViewState": "AgIAAAkBAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-04-17T20:34:03.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Model1.edmx [Diagram1]",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\EntityFramework\\Model1.edmx",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\EntityFramework\\Model1.edmx",
               "ToolTip": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\EntityFramework\\Model1.edmx [Diagram1]",
               "RelativeToolTip": "ProgramacionAvanzadaG8\\EntityFramework\\Model1.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2026-04-17T19:43:35.32Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2026-04-17T19:43:35.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "style.css",
               "DocumentMoniker": "C:\\xampp\\htdocs\\ProgramacionAvanzada\\ProgramacionAvanzadaG8\\Template\\css\\style.css",
               "RelativeDocumentMoniker": "ProgramacionAvanzadaG8\\Template\\css\\style.css",
@@ -373,8 +512,7 @@
               "RelativeToolTip": "ProgramacionAvanzadaG8\\Template\\css\\style.css",
               "ViewState": "AgIAAGYGAAAAAAAAAAAkwIkGAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-04-12T18:35:20.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-12T18:35:20.539Z"
             }
           ]
         }

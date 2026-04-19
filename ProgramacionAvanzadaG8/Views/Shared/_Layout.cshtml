@@ -6,7 +6,9 @@
 }
 <!DOCTYPE html>
 <meta charset="utf-8" />
-<html lang="es">
+<html lang="es" data-bs-theme="light">
+
+
 <head>
     <title>Frijolito - @ViewBag.Title</title>
     <meta charset="utf-8" />
@@ -23,10 +25,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,900;1,900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet" />
-    <!-- moved styles to Content/Site.css -->
 </head>
-<body>
-
+<body style="background-color:#fff;color:#111;">
     @* #region FLASH MESSAGES *@
     <div class="container mt-3">
 
@@ -112,10 +112,12 @@
             <div class="close-button">
                 <svg class="close" style="fill:white;"><use xlink:href="#close"></use></svg>
             </div>
-            @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { id = "search-form", @class = "text-lg-center text-md-left pt-3" }))
+            @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { id = "search-form", @class = "text-lg-center text-md-left pt-3 d-flex align-items-center justify-content-center" }))
             {
                 <input type="text" name="q" class="search-input" placeholder="Buscar juguetes..." />
-                <svg class="search"><use xlink:href="#search"></use></svg>
+                <button type="submit" class="btn btn-link p-0 ms-2" aria-label="Buscar">
+                    <svg class="search" width="20" height="20"><use xlink:href="#search"></use></svg>
+                </button>
             }
         </div>
     </div>
@@ -310,55 +312,45 @@
     @RenderBody()
 
     <footer id="footer" class="py-5 border-top">
-        <div class="container-lg">
+        <div class="container-lg text-center">
+            <!-- footer columns centered below -->
             <div class="row">
-                <div class="col-lg-2 pb-3">
-                    <div class="footer-menu">
-                        <h5 class="widget-title pb-2">Informaci&#243;n</h5>
-                        <ul class="menu-list list-unstyled">
-                            <li class="pb-2"><a href="@Url.Action("NuestroBlog","Paginas")">Nuestro Blog</a></li>
-                            <li class="pb-2"><a href="@Url.Action("PoliticaPrivacidad","Paginas")">Pol&#237;tica de Privacidad</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Contactenos","Paginas")">Cont&#225;ctenos</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Ayuda","Paginas")">Ayuda</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Comunidad","Paginas")">Comunidad</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 pb-3">
-                    <div class="footer-menu">
-                        <h5 class="widget-title pb-2">Nosotros</h5>
-                        <ul class="menu-list list-unstyled">
-                            <li class="pb-2"><a href="@Url.Action("Historia","Paginas")">Historia</a></li>
-                            <li class="pb-2"><a href="@Url.Action("NuestroEquipo","Paginas")">Nuestro Equipo</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Servicios","Paginas")">Servicios</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Empresa","Paginas")">Empresa</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Mayoreo","Paginas")">Mayoreo</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Menudeo","Paginas")">Menudeo</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 pb-3">
-                    <div class="footer-menu">
-                        <h5 class="widget-title pb-2">Colecci&#243;n Ni&#241;os</h5>
-                        <ul class="menu-list list-unstyled">
-                            <li class="pb-2"><a href="@Url.Action("SobreNosotros","Paginas")">Sobre Nosotros</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Contactenos","Paginas")">Cont&#225;ctenos</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Vehiculos","Paginas")">Veh&#237;culos</a></li>
-                            <li class="pb-2"><a href="@Url.Action("Superheroes","Paginas")">Superh&#233;roes</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 pb-3">
-                    <div class="footer-menu">
-                        <h5 class="widget-title pb-3">Cont&#225;ctenos</h5>
-                        <div class="footer-contact-text">
-                            <span>Frijolito, Costa Rica.</span><br />
-                            <span>Tel: (506) 1234-5678</span><br />
-                            <span>
-                                <a href="mailto:frijolitojugueteria@gmail.com" class="text-hover fw-bold">
-                                    frijolitojugueteria&#64;gmail.com
-                                </a>
-                            </span>
+                <div class="col-12">
+                    <div class="mx-auto" style="max-width:980px;">
+                        <div class="d-flex justify-content-center flex-wrap">
+                        <div class="footer-menu text-center mx-3" style="min-width:180px;max-width:260px;">
+                            <h5 class="widget-title pb-2">Informaci&#243;n</h5>
+                            <ul class="menu-list list-unstyled">
+                                <li class="pb-2"><a href="@Url.Action("NuestroBlog","Paginas")">Nuestro Blog</a></li>
+                                <li class="pb-2"><a href="@Url.Action("PoliticaPrivacidad","Paginas")">Pol&#237;tica de Privacidad</a></li>
+                                <li class="pb-2"><a href="@Url.Action("Contactenos","Paginas")">Cont&#225;ctenos</a></li>
+                                <li class="pb-2"><a href="@Url.Action("Ayuda","Paginas")">Ayuda</a></li>
+                                <li class="pb-2"><a href="@Url.Action("Comunidad","Paginas")">Comunidad</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-menu text-center mx-3" style="min-width:180px;max-width:260px;">
+                            <h5 class="widget-title pb-2">Nosotros</h5>
+                            <ul class="menu-list list-unstyled">
+                                <li class="pb-2"><a href="@Url.Action("Historia","Paginas")">Historia</a></li>
+                                <li class="pb-2"><a href="@Url.Action("NuestroEquipo","Paginas")">Nuestro Equipo</a></li>
+                                <li class="pb-2"><a href="@Url.Action("Servicios","Paginas")">Servicios</a></li>
+                                <li class="pb-2"><a href="@Url.Action("Empresa","Paginas")">Empresa</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-menu text-center mx-3" style="min-width:180px;max-width:260px;">
+                            <h5 class="widget-title pb-3">Cont&#225;ctenos</h5>
+                            <div class="footer-contact-text">
+                                <span>Frijolito, Costa Rica.</span><br />
+                                <span>Tel: (506) 1234-5678</span><br />
+                                <span>
+                                    <a href="mailto:frijolitojugueteria@gmail.com" class="text-hover fw-bold">
+                                        frijolitojugueteria&#64;gmail.com
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -375,7 +367,7 @@
     @Scripts.Render("~/bundles/jqueryval")
     <script>
         // fallback: si por alguna razon jquery.validate no está registrado, cargarlo dinámicamente
-        (function(){
+        (function () {
             if (typeof jQuery === 'undefined') return;
             if (typeof jQuery.fn.validate === 'undefined') {
                 var s = document.createElement('script');
